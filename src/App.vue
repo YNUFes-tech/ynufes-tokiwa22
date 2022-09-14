@@ -118,11 +118,9 @@ html, body {
 }
 
 .background{
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  background-color: black;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: -100;
 }
 
