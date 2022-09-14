@@ -1,0 +1,228 @@
+<script setup>
+// eslint-disable-next-line no-unused-vars
+import {ref, watch} from "vue";
+// eslint-disable-next-line no-unused-vars
+import {useRoute} from "vue-router";
+
+let mToggled = ref(false);
+
+function toggleMenu() {
+  mToggled.value = !mToggled.value;
+}
+
+function closeMenu() {
+  mToggled.value = false;
+}
+
+const route = useRoute();
+watch(route, () => {
+  closeMenu()
+});
+</script>
+<template>
+  <div id="header_wrapper">
+    <header>
+      <div class="header_top">
+
+        <router-link id="site_title" to="/" @click="closeMenu">
+          <div class="logo1">
+            <div>22常盤祭</div>
+            <div>横浜国立大学 大学祭</div>
+          </div>
+        </router-link>
+        <button id="mobile_toggle" @click="toggleMenu">
+          <svg aria-hidden="true" height="40" viewBox="0 0 30 30" width="40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                  stroke-width="2"></path>
+          </svg>
+        </button>
+      </div>
+
+    </header>
+    <transition name="mobileMenu">
+      <div id="mobile_menu" v-show="mToggled">
+        <router-link active-class="selected" to="/" @click="closeMenu">ホーム</router-link>
+        <router-link active-class="selected" to="/" @click="closeMenu">企画一覧</router-link>
+        <router-link active-class="selected" to="/" @click="closeMenu">お役立ちコンテンツ</router-link>
+        <router-link active-class="selected" to="/" @click="closeMenu">常盤祭とは</router-link>
+        <router-link active-class="selected" to="/" @click="closeMenu">ご案内</router-link>
+        <router-link active-class="selected" to="/" @click="closeMenu">サイトマップ</router-link>
+
+        <div class="sns">
+          <a href="https://twitter.com/ynu_fes" target="_blank"><img alt="twitter"
+                                                                     class="hover-to-shrink"
+                                                                     src="assets/sns/twitter_logo.webp"/></a>
+          <a href="https://www.instagram.com/ynu_fes" target="_blank"><img alt="instagram"
+                                                                           class="hover-to-shrink"
+                                                                           src="assets/sns/instagram_logo.webp"/></a>
+          <a href="https://www.facebook.com/ynufes" target="_blank"><img alt="facebook"
+                                                                         class="hover-to-shrink"
+                                                                         src="assets/sns/facebook_logo.png"/></a>
+        </div>
+      </div>
+    </transition>
+    <transition name="mobileBack">
+      <div class="header-back" v-show="mToggled" @click="closeMenu"/>
+    </transition>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.header_active {
+  background: #00000055;
+}
+
+header {
+  padding-top: 0.3rem;
+  z-index: 100;
+  width: 100%;
+  position: fixed;
+  color: white;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  * {
+    white-space: nowrap;
+  }
+
+}
+
+#header_wrapper {
+  position: relative;
+
+}
+
+.header-back {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: #0009;
+}
+
+
+.mobileBack-enter-active, .mobileBack-fade-active {
+  transition: all .3s ease-in-out;
+}
+
+.mobileBack-enter-from, .mobileBack-leave-to {
+  opacity: 0;
+}
+
+.mobileMenu-enter-active, .mobileMenu-fade-active {
+  transition: all .3s ease-in-out;
+}
+
+.mobileMenu-enter-from, .mobileMenu-leave-to {
+  transform: translateX(80vw);
+}
+
+#mobile_menu {
+  z-index: 100;
+  transition: all 0.5s 0s ease-in-out;
+  padding: 85px 20px;
+  margin-right: 0;
+  margin-left: auto;
+  width: unquote("min(220px, 80vw)");
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background: black;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0.8rem;
+  }
+
+  a.selected {
+    background: white;
+    color: black;
+  }
+
+  .sns {
+    display: flex;
+    width: 100%;
+
+    a {
+      flex-basis: 30%;
+      object-fit: contain;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.header_top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#mobile_toggle {
+  color: white;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+#site_title {
+  text-decoration: none;
+  color: white;
+  height: 70px;
+  font-family: 'Shippori Mincho', serif;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo1 {
+    > div:first-of-type {
+      padding: 0;
+      height: 35px;
+      line-height: 1;
+      font-size: 35px;
+      margin-bottom: 3px;
+      @media screen and (max-width: 400px) {
+        font-size: 28px;
+        height: 28px;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      margin-top: 3px;
+      font-size: 15px;
+      @media screen and (max-width: 400px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+}
+
+
+</style>
