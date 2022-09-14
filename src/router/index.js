@@ -14,6 +14,11 @@ const routes = [
     path: '/events',
     name: '',
     component: EventListView
+  },
+  {
+    path: '/detail',
+    name: '',
+    component: EventDetailView
   }
 ]
 
