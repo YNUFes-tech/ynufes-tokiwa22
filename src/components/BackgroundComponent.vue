@@ -22,6 +22,7 @@ onMounted(() => {
 
 <template>
   <div class="root">
+    <div class="star comet"/>
     <img id="bg-image" src="@/assets/poster-background.webp" alt="背景画像">
   </div>
 </template>

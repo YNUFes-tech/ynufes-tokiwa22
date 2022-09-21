@@ -12,7 +12,6 @@ import Background from "@/components/BackgroundComponent"
   </nav>
   <router-view class="router-view"/>
   <!--Copyright (c) 2022 by Francesco Allegrini (https://codepen.io/francesco-allegrini/pen/jeQpaL)-->
-  <div class="star comet"></div>
   <Background id="bg"/>
 </template>
 
