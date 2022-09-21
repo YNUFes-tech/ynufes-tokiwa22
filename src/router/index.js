@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 // eslint-disable-next-line no-unused-vars
 import EventDetailView from '../views/EventDetailView'
@@ -16,9 +16,13 @@ const routes = [
     component: EventListView
   },
   {
-    path: '/detail',
+    path: '/event/:id',
     name: '',
-    component: EventDetailView
+    component: EventDetailView,
+    props: route => {
+      console.log(route.params.id)
+      return {...route.params, eventId: parseInt(route.params.id)}
+    }
   }
 ]
 
