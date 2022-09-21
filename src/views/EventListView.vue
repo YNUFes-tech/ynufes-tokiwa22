@@ -6,23 +6,23 @@ import data from "@/assets/eventData.json";
 </script>
 <template>
   <div class="root-wrapper">
-    <!--    //この中にレイアウトを記述する-->
-
     <div class="body-frame">
       <div class="content-frame">
         <div class="events_block">
-
-
-          <EventWidget v-for="d in data" :key="d.key" :eventData="d"/>
-
+          <router-link :to="`/event/${d.event_id}.webp`" v-for="d in data" :key="d.key" class="router-link">
+            <EventWidget :eventData="d"/>
+          </router-link>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <style lang="scss" scoped>
+.router-link{
+  text-decoration: none;
+}
+
 .root-wrapper {
   display: flex;
   flex-direction: column;
