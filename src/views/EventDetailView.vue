@@ -56,6 +56,7 @@
 
   align-items: center;
   padding: 0 3rem;
+  box-sizing: border-box;
   color: white;
 }
 
