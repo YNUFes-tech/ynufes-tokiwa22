@@ -2,17 +2,6 @@
 
 import EventWidget from "@/components/EventWidget";
 import data from "@/assets/eventData.json";
-// eslint-disable-next-line no-unused-vars
-const eventGenre = {
-  1: "展示販売",
-  2: "パフォーマンス",
-  3: "ゲームスポーツ",
-  4: "デザート",
-  5: "鉄板・麺類",
-  6: "ファストフード",
-  7: "ドリンク",
-  8: "ご飯もの",
-};
 
 </script>
 <template>
@@ -239,7 +228,7 @@ const eventGenre = {
 }
 
 @media screen and (max-width: 21.9rem) {
-  .root-wrapper{
+  .root-wrapper {
     font-size: 0.7rem;
   }
 }
