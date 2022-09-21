@@ -2,6 +2,19 @@
 
 import {onMounted} from "vue";
 
+/**
+ * 元のアニメーションは
+ * Copyright (c) 2022 by Francesco Allegrini (https://codepen.io/francesco-allegrini/pen/jeQpaL)
+ * より拝借。
+ * ここでは星を指定の数だけ追加するという処理を動的に行っている。
+ * BackgroundComponent(←bgというidを持っている)に要素を追加したいが、
+ * script setup内に記述すると、
+ * それぞれの要素が配置される前、つまりbgが配置される前に動作してしまうため、
+ * 正常に動作しない。
+ * そのため、onMounted内、つまりすべての部品の配置が終わった後での動作を予約して
+ * この問題を解消している。
+ * 詳しくはVue Lifecycleを調べてみるとよい。
+ */
 onMounted(() => {
   const wH = window.innerHeight
   const wW = window.innerWidth
@@ -10,7 +23,7 @@ onMounted(() => {
 
     for (let i = 0; i < n; i++) {
       const div = document.createElement('div')
-      div.className = i % 20 == 0 ? 'star star--big' : i % 9 == 0 ? 'star star--medium' : 'star'
+      div.className = i % 20 === 0 ? 'star star--big' : i % 9 === 0 ? 'star star--medium' : 'star'
       // random everywhere!
       div.setAttribute('style', `top:${Math.round(Math.random() * wH)}px;left:${Math.round(Math.random() * wW)}px;animation-duration:${Math.round(Math.random() * 3000) + 3000}ms;animation-delay:${Math.round(Math.random() * 3000)}ms;`)
       background.appendChild(div)
@@ -22,6 +35,7 @@ onMounted(() => {
 
 <template>
   <div class="root">
+    <!---->
     <div class="star comet"/>
     <img id="bg-image" src="@/assets/poster-background.webp" alt="背景画像">
   </div>

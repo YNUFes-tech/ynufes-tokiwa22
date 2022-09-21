@@ -11,7 +11,6 @@ import Background from "@/components/BackgroundComponent"
     <router-link to="/detail">Detail</router-link>
   </nav>
   <router-view class="router-view"/>
-  <!--Copyright (c) 2022 by Francesco Allegrini (https://codepen.io/francesco-allegrini/pen/jeQpaL)-->
   <Background id="bg"/>
 </template>
 
