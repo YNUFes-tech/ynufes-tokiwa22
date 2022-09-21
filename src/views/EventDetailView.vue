@@ -8,7 +8,6 @@ const props = defineProps({
   }
 })
 
-console.log(props.eventId)
 const eventData = data.find((d) => d.event_id === props.eventId)
 </script>
 <template>

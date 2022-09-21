@@ -12,15 +12,14 @@ const routes = [
   },
   {
     path: '/events',
-    name: '',
+    name: 'EventListView',
     component: EventListView
   },
   {
     path: '/event/:id',
-    name: '',
+    name: 'EventDetailView',
     component: EventDetailView,
     props: route => {
-      console.log(route.params.id)
       return {...route.params, eventId: parseInt(route.params.id)}
     }
   }
