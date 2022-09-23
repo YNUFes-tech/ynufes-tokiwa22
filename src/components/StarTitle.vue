@@ -41,6 +41,7 @@ onMounted(() => {
 }
 
 .star-animation-title-text{
+  font-size: 2em;
   padding: 0 0.5em;
 }
 
