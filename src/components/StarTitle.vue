@@ -14,7 +14,7 @@ onMounted(() => {
     var h = window.innerHeight;
     for (let target of targets) {
       var pos = target.getBoundingClientRect().top + scroll;
-      if (scroll + h + 100 > pos && scroll - 100 < pos) {//スクロール量 > アニメーションさせたい要素の位置
+      if (scroll + h -50 > pos && scroll - 100 < pos) {//スクロール量 > アニメーションさせたい要素の位置
         target.classList.add('star-animation');
       } else {
         target.classList.remove('star-animation')
