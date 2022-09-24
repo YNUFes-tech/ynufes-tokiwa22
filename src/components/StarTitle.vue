@@ -5,8 +5,15 @@ const props = defineProps({
   title: {
     type: String,
     required: true
+  },
+  color: {
+    type: String,
+    required: false,
+    default: "#ecece5b3"
   }
 })
+
+const tailColor = "background: radial-gradient(ellipse at right, " + props.color + " 0%, #44444455 80%, #11111100 100%);";
 onMounted(() => {
   let targets = document.querySelectorAll('.star-animation-title')
   window.addEventListener('scroll', function () {
@@ -26,21 +33,20 @@ onMounted(() => {
 <template>
   <div class="star-animation-title star-animation">
     <div class="star-animation-title-text">{{ props.title }}</div>
-    <div class="star-animation-title-tail"/>
+    <div class="star-animation-title-tail" :style="tailColor"/>
   </div>
 </template>
 
 <style scoped lang="scss">
 .star-animation-title-tail {
   width: 100%;
-  background: radial-gradient(ellipse at right, rgba(236, 236, 229, 0.8) 0%, #44444455 80%, #11111100 100%);
   height: 5px;
   padding: 2px 0;
   position: relative;
   opacity: 0;
 }
 
-.star-animation-title-text{
+.star-animation-title-text {
   font-size: 2em;
   padding: 0 0.3em;
 }
