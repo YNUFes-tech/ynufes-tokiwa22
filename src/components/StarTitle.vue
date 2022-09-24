@@ -33,7 +33,7 @@ onMounted(() => {
 <style scoped lang="scss">
 .star-animation-title-tail {
   width: 100%;
-  background: radial-gradient(ellipse at right, #cfd9e5 0%, #44444455 80%, #11111100 100%);
+  background: radial-gradient(ellipse at right, rgba(236, 236, 229, 0.8) 0%, #44444455 80%, #11111100 100%);
   height: 5px;
   padding: 2px 0;
   position: relative;
@@ -42,7 +42,7 @@ onMounted(() => {
 
 .star-animation-title-text{
   font-size: 2em;
-  padding: 0 0.5em;
+  padding: 0 0.3em;
 }
 
 
@@ -62,13 +62,13 @@ onMounted(() => {
   content: "";
   vertical-align: middle;
   background-size: cover;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   background: url("@/assets/star-white.webp") left center no-repeat;
   position: absolute;
-  right: -5px;
-  top: -4px;
-  background-size: 15px 15px;
+  right: -10px;
+  top: -9.5px;
+  background-size: 20px 20px;
 }
 
 .star-animation-title {
@@ -85,14 +85,14 @@ onMounted(() => {
   }
   to {
     opacity: 1;
-    height: 5px;
+    height: 1px;
     width: 100%;
   }
 }
 
 @keyframes star-rotate {
   from {
-    transform: rotate(-90deg);
+    transform: rotate(-120deg);
   }
   to {
     transform: rotate(0);
