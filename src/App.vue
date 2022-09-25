@@ -1,45 +1,63 @@
 <script setup>
+import Background from "@/components/BackgroundComponent"
 import HeaderView from "@/components/HeaderView";
 </script>
 
 <template>
-
-  <div class="wrapper">
-<!--    <div id="loader" style="color: white;font-family: 'Kaisei Decol', serif;">
-      <div style="font-size: 6rem;font-family: 'Kaisei Decol', serif;">花笑み</div>
-      <div style="font-size: 3rem; text-align: center;">22清陵祭</div>
-      <div style="font-size: 1.5rem; line-height: 1.1; text-align: center; padding-bottom: 2rem">横浜国立大学<br>オンライン大学祭
-      </div>
-      <div class="spinner">
-        <div class="cube1"></div>
-        <div class="cube2"></div>
-      </div>
-    </div>-->
-
-    <HeaderView class="fadeUp" id="header"/>
-    <div  id="body-frame">
-      <router-view/>
-      <Footer/>
-    </div>
-  </div>
+  <HeaderView class="fadeUp" id="header"/>
+  <router-view class="router-view"/>
+  <Background id="bg"/>
 </template>
-
-
 
 <style>
 body {
   margin: 0 auto;
 }
 #app {
-  font-family:  'Klee One', cursive;
+  font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
 
-#body-frame {
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+
+.router-view {
+  width: calc(100vw - 1rem);
+  margin: 0 auto;
   padding-top: 70px;
 }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #03061A;
+  position: relative;
+  z-index: -200;
+}
+
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
 
 </style>
