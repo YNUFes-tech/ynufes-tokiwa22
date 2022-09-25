@@ -2,7 +2,8 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/events">Events</router-link> |
-    <router-link to="/detail">Detail</router-link>
+    <router-link to="/detail">Detail</router-link> |
+    <router-link to="/karaoke">karaoke</router-link>
   </nav>
   <router-view class="router-view"/>
     <!--Copyright (c) 2022 by Francesco Allegrini (https://codepen.io/francesco-allegrini/pen/jeQpaL)-->
