@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 // eslint-disable-next-line no-unused-vars
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
+import EventsByLocation from "@/views/EventsByLocation";
 
 const routes = [
   {
@@ -21,7 +22,12 @@ const routes = [
     component: EventDetailView,
     props: route => {
       return {...route.params, eventId: parseInt(route.params.id)}
-    }
+    },
+  },
+  {
+    path: '/search/location',
+    name: 'SearchByLocation',
+    component: EventsByLocation
   }
 ]
 
