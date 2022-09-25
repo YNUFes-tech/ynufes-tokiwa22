@@ -1,4 +1,7 @@
 <script setup>
+// eslint-disable-next-line no-unused-vars
+import {computed} from "vue";
+
 const props = defineProps({
   nameJP: {
     type: String,
@@ -19,12 +22,26 @@ const props = defineProps({
     type: String,
     required: true,
     default: "area1.png"
+  },
+  color: {
+    type: String,
+    required: false,
+    default: "#ecb731"
   }
 })
+// eslint-disable-next-line no-unused-vars
+const setColor = computed(() => {
+      console.log(props.color)
+      if (!props.color) return {}
+      return {
+        'border-color': props.color,
+      }
+    }
+)
 </script>
 
 <template>
-  <div class="location-tile">
+  <div class="location-tile" :style="setColor">
     <h2>{{ props.nameEN }}</h2>
     <h1>{{ props.nameJP }}</h1>
     <div class="facilities_icons">
@@ -40,7 +57,7 @@ const props = defineProps({
 <style scoped lang="scss">
 .location-tile {
   font-size: 12px;
-  border: solid #ecb731;
+  border-style: solid;
   border-width: 0 0 10px 0;
   border-radius: 15px;
   color: black;
