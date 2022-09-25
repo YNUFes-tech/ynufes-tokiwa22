@@ -11,7 +11,11 @@
     <h1>企画場所から探す</h1>
     <div class="locations-container">
       <a>
-        <LocationTile/>
+        <LocationTile
+            nameJP="大学会館周辺"
+            nameEN="Area around Univ Coop"
+            color="red"
+            map="area1.png"/>
       </a>
       <a>
         <LocationTile/>

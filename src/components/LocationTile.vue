@@ -31,7 +31,6 @@ const props = defineProps({
 })
 // eslint-disable-next-line no-unused-vars
 const setColor = computed(() => {
-      console.log(props.color)
       if (!props.color) return {}
       return {
         'border-color': props.color,
