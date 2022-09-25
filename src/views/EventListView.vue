@@ -9,7 +9,7 @@ import data from "@/assets/eventData.json";
     <div class="body-frame">
       <div class="content-frame">
         <div class="events_block">
-          <router-link :to="`/event/${d.event_id}.webp`" v-for="d in data" :key="d.key" class="router-link">
+          <router-link :to="`/event/${d.event_id}`" v-for="d in data" :key="d.key" class="router-link">
             <EventWidget :eventData="d"/>
           </router-link>
         </div>
