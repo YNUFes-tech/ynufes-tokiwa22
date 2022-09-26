@@ -81,9 +81,31 @@ export default {
   color: black;
 }
 
-.event-detail > p{
+.detail{
+  display: inline-block;
+  margin: 30px;
+  padding: 50px;
+  color: white;
+  border: double white;
+}
+
+.detail:after {
+  position: absolute;
+  top:2px;
+  left:-4px;
+  content:"";
+  height:100%;
+  width:100%;
+  z-index:-999;
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  background-color: #004b79;
+}
+
+.detail > p{
   line-height: 50px;
   letter-spacing: 2px;
+  font-size: large;
 }
 
 .step1{
