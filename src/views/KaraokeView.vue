@@ -1,6 +1,8 @@
 <template>
 <div class="root-wrapper">
-  <img src="@/assets/karaoke_logo.png">
+  <div class="title">
+    <img src="@/assets/karaoke_logo.png">
+  </div>
   <div class="introduction">
     <p>
     3年ぶりの開催となった常盤祭。<br>
@@ -12,7 +14,7 @@
     出演してくれた方全員に参加賞を贈呈いたします。
     </p>
   </div>
-  <div class="information event-detail">
+  <div class="information detail">
     <h1>企画詳細</h1>
     <p>
       開催日：10月28日（金）<br>
@@ -27,26 +29,21 @@
   </div>
   <div class="information entry-flow">
     <h1>出演までの流れ</h1>
-    <div class="step1">
-      <h2>①事前エントリー申し込み</h2>
-      <p>googleフォームにメールアドレス・名前・歌いたい曲名とそのアーティスト名を入力した上で2点の同意事項を確認し、回答を送信する。</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSedpF4xnl0qb_rp_IWVVktUspFz0OL2jYmpMoLDigdFgsCF2w/viewform?usp=sf_link" class="btn bgleft"><span>申し込みフォームはこちら</span></a>
+    <div class="step">
+      <h2 class="yellow-marker">①<span>事前エントリー申し込み</span></h2>
+      <p>申し込みフォームにメールアドレス・名前・歌いたい曲名とそのアーティスト名を入力した上で2点の同意事項を確認し、回答を送信する。</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSedpF4xnl0qb_rp_IWVVktUspFz0OL2jYmpMoLDigdFgsCF2w/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn bgleft"><span>申し込みフォームはこちら</span></a>
     </div>
-    <div class="step2">
-      <h2>②出演決定メールを受信</h2>
+    <div class="step">
+      <h2 class="blue-marker">②<span>出演決定メールを受信</span></h2>
       <p>出演が決定した方にはメールを送信いたします。出演についての詳細をご確認ください。</p>
       <img src="@/assets/mail_icon.png">
     </div>
-    <div class="step3">
-      <h2>③会場に集合</h2>
+    <div class="step">
+      <h2 class="pink-marker">③<span>会場に集合</span></h2>
       <p>当日に会場にお越しいただき、受付で出演決定メールをスマートフォンの画面等でご提示ください。出演者待機場所へご案内いたします。</p>
       <img src="@/assets/smartphone_icon.png">
     </div>
-  </div>
-  <div class="information award-goods">
-    <h1>気になる豪華景品はこちら！</h1>
-    <img src="">
-    <p>出演していただいた方にはもれなく全国で使えるビッグエコー室料50%OFFパスポートを贈呈します。</p>
   </div>
 </div>
 </template>
@@ -63,6 +60,27 @@ export default {
   width: 40rem;
 }
 
+h2{
+  font-weight: bold;
+}
+
+.yellow-marker > span{
+  background: linear-gradient(transparent 80%, yellow 20%);
+}
+
+.blue-marker > span{
+  background: linear-gradient(transparent 80%, turquoise 20%);
+}
+
+.pink-marker > span{
+  background: linear-gradient(transparent 80%, hotpink 20%);
+}
+
+.title > img{
+  max-width: 800px;
+  width: 80vw;
+}
+
 .introduction{
   color: white;
   letter-spacing: 3px;
@@ -71,14 +89,9 @@ export default {
 }
 
 .information{
-  background-color: #ffffff90;
-  border-radius: 50px;
   padding-top: 80px;
   padding-bottom: 80px;
-  width: 800px;
-  margin: 50px auto;
   position: relative;
-  color: black;
 }
 
 .detail{
@@ -108,13 +121,43 @@ export default {
   font-size: large;
 }
 
-.step1{
-  padding: 30px 80px;
-  line-height: 50px;
-  letter-spacing: 3px;
+.entry-flow{
+  margin: 50px auto;
+  max-width: 700px;
+  color: #1a447c;
+  background-color: white;
+  z-index: 3;
+  border: double 10px #1a447c;
+  /* 方眼紙模様 */
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
+
 }
 
-.step1 > a{
+
+.step{
+  padding: 30px 80px;
+  line-height: 50px;
+  letter-spacing: 1px;
+}
+
+.step > p{
+  text-align: left;
+}
+
+.step > h2{
+  text-align: left;
+}
+
+.step > img{
+  width: 15rem;
+  text-align: center;
+}
+
+.step > a{
   margin: 30px auto;
 }
 
@@ -159,15 +202,6 @@ export default {
   transform:scale(1, 1);
 }
 
-.step2{
-  padding: 30px 80px;
-  line-height: 50px;
-  letter-spacing: 3px;
-}
-
-.step2 > img{
-  width: 15rem;
-}
 
 .award-goods{
   display: inline-block;
