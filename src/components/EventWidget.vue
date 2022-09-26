@@ -1,6 +1,4 @@
 <script setup>
-import {defineProps} from "vue"
-
 const props = defineProps({
   eventData: {
     type: Object,
@@ -22,7 +20,7 @@ const eventGenre = {
 
 <template>
   <div class="event_widget">
-    <img :src="`/icon/${props.eventData.icon_filename}`"/>
+    <img :src="`/icons/${eventData.event_id}.webp`"/>
     <div class="tag_area">
       <div v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
         {{ eventGenre[props.eventData.event_genre_id] }}

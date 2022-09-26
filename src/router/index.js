@@ -1,6 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-// eslint-disable-next-line no-unused-vars
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import KaraokeView from "@/views/KaraokeView";
@@ -13,16 +12,19 @@ const routes = [
   },
   {
     path: '/events',
-    name: '',
+    name: 'EventListView',
     component: EventListView
   },
   {
-    path: '/detail',
-    name: '',
-    component: EventDetailView
+    path: '/event/:id',
+    name: 'EventDetailView',
+    component: EventDetailView,
+    props: route => {
+      return {...route.params, eventId: parseInt(route.params.id)}
+    }
   },
   {
-    path:'/karaoke',
+    path:'/sp/karaoke',
     name: '',
     component: KaraokeView
   }
