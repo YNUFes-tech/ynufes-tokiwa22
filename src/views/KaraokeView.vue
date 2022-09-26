@@ -20,6 +20,11 @@
       場所：図書館1Fメディアホール
     </p>
   </div>
+  <div class="information award-goods">
+    <h1>気になる豪華景品はこちら！</h1>
+    <img src="">
+    <p>出演していただいた方にはもれなく全国で使えるビッグエコー室料50%OFFパスポートを贈呈します。</p>
+  </div>
   <div class="information entry-flow">
     <h1>出演までの流れ</h1>
     <div class="step1">
@@ -142,20 +147,33 @@ export default {
   width: 15rem;
 }
 
-.step3{
-  padding: 30px 80px;
-  line-height: 50px;
-  letter-spacing: 3px;
+.award-goods{
+  display: inline-block;
+  max-width: 500px;
+  margin: 30px;
+  color: white;
+  border: double white;
 }
 
-.step3 > img{
-  width: 15rem;
+.award-goods:after {
+  position: absolute;
+  top:2px;
+  left:-4px;
+  content:"";
+  height:100%;
+  width:100%;
+  z-index:-999;
+  -webkit-transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  background-color: #6D436E;
 }
 
 .award-goods > p{
   padding: 0 80px;
   line-height: 50px;
   letter-spacing: 3px;
+  text-align: left;
+  font-size: large;
 }
 
 
