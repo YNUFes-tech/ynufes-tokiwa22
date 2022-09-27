@@ -60,9 +60,6 @@ export default {
   width: 40rem;
 }
 
-h2{
-  font-weight: bold;
-}
 
 .yellow-marker > span{
   background: linear-gradient(transparent 80%, yellow 20%);
@@ -118,11 +115,10 @@ h2{
 .detail > p{
   line-height: 50px;
   letter-spacing: 2px;
-  font-size: large;
 }
 
 .entry-flow{
-  margin: 50px auto;
+  margin: 80px auto;
   max-width: 700px;
   color: #1a447c;
   background-color: white;
@@ -229,7 +225,40 @@ h2{
   line-height: 50px;
   letter-spacing: 3px;
   text-align: left;
-  font-size: large;
+}
+
+@media (max-width: 420px){
+  p,a,h2{
+    font-size: 0.5rem;
+  }
+  h1{
+    font-size: 0.8rem;
+  }
+  .detail{
+    padding: 20px;
+    margin: 10px;
+  }
+  .award-goods > p{
+    padding: 5px;
+    margin: 10px;
+  }
+  .information{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .step{
+    padding: 5px 50px;
+    line-height: 30px;
+  }
+  .step > img{
+    width: 50vw;
+  }
+}
+
+@media (min-width: 2000px){
+  .entry-flow{
+    max-width: 1200px;
+  }
 }
 
 
