@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import KaraokeView from "@/views/KaraokeView";
+import PosterView from "@/views/PosterView";
 
 const routes = [
   {
@@ -27,6 +28,11 @@ const routes = [
     path:'/sp/karaoke',
     name: '',
     component: KaraokeView
+  },
+  {
+    path: '/poster',
+    name: '',
+    component: PosterView
   }
 ]
 
