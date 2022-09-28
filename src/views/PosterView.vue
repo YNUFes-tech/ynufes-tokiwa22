@@ -73,9 +73,10 @@ p{
 }
 
 .others{
-  max-width: 900px;
+  max-width: 950px;
+  width: 90%;
   margin: 0 auto;
-  padding: 50px;
+  padding: 30px;
   text-align: left;
 }
 
@@ -117,6 +118,14 @@ p{
 
 .caption > span{
   font-size: 1rem;
+}
+
+@media (max-width: 340px) {
+  p{
+    font-size: 0.5rem;
+    letter-spacing: normal;
+    line-height: 2rem;
+  }
 }
 
 </style>
