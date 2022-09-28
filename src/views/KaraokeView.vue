@@ -93,8 +93,8 @@ export default {
 
 .detail{
   display: inline-block;
-  margin: 30px;
-  padding: 50px;
+  margin: 2rem;
+  padding: 1rem;
   color: white;
   border: double white;
 }
@@ -118,7 +118,8 @@ export default {
 }
 
 .entry-flow{
-  margin: 80px auto;
+  margin: 1rem auto;
+  padding: 2rem;
   max-width: 700px;
   color: #1a447c;
   background-color: white;
@@ -135,7 +136,7 @@ export default {
 
 
 .step{
-  padding: 30px 80px;
+  padding: 40px 0;
   line-height: 50px;
   letter-spacing: 1px;
 }
@@ -202,7 +203,8 @@ export default {
 .award-goods{
   display: inline-block;
   max-width: 500px;
-  margin: 30px;
+  margin: 2rem;
+  padding: 1rem;
   color: white;
   border: double white;
 }
@@ -221,34 +223,31 @@ export default {
 }
 
 .award-goods > p{
-  padding: 0 80px;
   line-height: 50px;
   letter-spacing: 3px;
   text-align: left;
 }
 
-@media (max-width: 420px){
+@media (max-width: 320px){
   p,a,h2{
-    font-size: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 2.5rem;
   }
   h1{
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
   .detail{
-    padding: 20px;
-    margin: 10px;
+    padding: 2rem;
+    margin: 1rem;
   }
-  .award-goods > p{
-    padding: 5px;
-    margin: 10px;
+  .award-goods{
+    padding: 2rem;
+    margin: 1rem;
   }
   .information{
     padding-top: 50px;
     padding-bottom: 50px;
-  }
-  .step{
-    padding: 5px 50px;
-    line-height: 30px;
   }
   .step > img{
     width: 50vw;
