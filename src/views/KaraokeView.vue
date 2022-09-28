@@ -20,7 +20,7 @@
       開催日: 10月28日(金)<br>
       時間: 開演14:00/閉演15:40(予定)<br>
       場所: 図書館1Fメディアホール<br>
-      事前エントリー募集対象: 横浜国立大学在学中の方<br>
+      事前エントリーの募集対象: 横浜国立大学在学中の方<br>
       主催: 横浜国立大学大学祭実行委員会
     </p>
   </div>
@@ -95,7 +95,7 @@ export default {
 
 .detail{
   display: inline-block;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem;
   color: white;
   border: double white;
@@ -205,7 +205,7 @@ export default {
 .award-goods{
   display: inline-block;
   max-width: 500px;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem;
   color: white;
   border: double white;
