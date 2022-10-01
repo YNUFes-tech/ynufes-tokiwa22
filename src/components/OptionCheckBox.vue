@@ -61,104 +61,106 @@
 
   div:nth-child(1) {
     label {
-      background: #b36305;
       border: solid .3em #b36305;
+      color: #b36305;
     }
 
     input:checked ~ label {
-      color: #b36305;
+      background: #b36305;
     }
   }
 
 
   div:nth-child(2) {
     label {
-      background: #e32017;
       border: solid .3em #e32017;
+      color: #e32017;
     }
 
     input:checked ~ label {
-      color: #e32017;
+      background: #e32017;
     }
   }
 
 
   div:nth-child(3) {
     label {
-      background: #00782a;
       border: solid .3em #00782a;
+      color: #00782a;
     }
 
     input:checked ~ label {
-      color: #00782a;
+      background: #00782a;
     }
   }
 
 
   div:nth-child(4) {
     label {
-      background: #003688;
       border: solid .3em #003688;
+      color: #003688;
     }
 
     input:checked ~ label {
-      color: #003688;
+      background: #003688;
     }
   }
 
 
   div:nth-child(5) {
     label {
-      background: #9b0056;
       border: solid .3em #9b0056;
+      color: #9b0056;
     }
 
     input:checked ~ label {
-      color: #9b0056;
+      background: #9b0056;
     }
   }
 
 
   div:nth-child(6) {
     label {
-      background: #ee7c0e;
       border: solid .3em #ee7c0e;
+      color: #ee7c0e;
     }
 
     input:checked ~ label {
-      color: #ee7c0e;
+      background: #ee7c0e;
     }
   }
 
 
   div:nth-child(7) {
     label {
-      background: #84b817;
       border: solid .3em #84b817;
+      color: #84b817;
     }
 
     input:checked ~ label {
-      color: #84b817;
+      background: #84b817;
     }
   }
 
 
   div:nth-child(8) {
     label {
-      background: #0098d4;
       border: solid .3em #0098d4;
+      color: #0098d4;
     }
 
     input:checked ~ label {
-      color: #0098d4;
+      background: #0098d4;
     }
   }
 
 
-  input:checked {
-    + label {
-      background: white;
-    }
+  input + label {
+    background: white;
+  }
+
+  input:checked + label {
+    color: white;
   }
 }
 
