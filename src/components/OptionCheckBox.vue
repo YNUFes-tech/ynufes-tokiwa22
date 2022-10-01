@@ -52,16 +52,17 @@
     box-sizing: border-box;
 
     > label {
+      transition: all 0.3s ease-in-out;
       border-radius: 0.2em;
       box-sizing: border-box;
-      padding: 0.2em;
+      padding: 0.1em;
     }
   }
 
   div:nth-child(1) {
     label {
       background: #b36305;
-      border: solid 2px #b36305;
+      border: solid .3em #b36305;
     }
 
     input:checked ~ label {
@@ -73,7 +74,7 @@
   div:nth-child(2) {
     label {
       background: #e32017;
-      border: solid 2px #e32017;
+      border: solid .3em #e32017;
     }
 
     input:checked ~ label {
@@ -85,7 +86,7 @@
   div:nth-child(3) {
     label {
       background: #00782a;
-      border: solid 2px #00782a;
+      border: solid .3em #00782a;
     }
 
     input:checked ~ label {
@@ -97,7 +98,7 @@
   div:nth-child(4) {
     label {
       background: #003688;
-      border: solid 2px #003688;
+      border: solid .3em #003688;
     }
 
     input:checked ~ label {
@@ -109,7 +110,7 @@
   div:nth-child(5) {
     label {
       background: #9b0056;
-      border: solid 2px #9b0056;
+      border: solid .3em #9b0056;
     }
 
     input:checked ~ label {
@@ -121,7 +122,7 @@
   div:nth-child(6) {
     label {
       background: #ee7c0e;
-      border: solid 2px #ee7c0e;
+      border: solid .3em #ee7c0e;
     }
 
     input:checked ~ label {
@@ -133,7 +134,7 @@
   div:nth-child(7) {
     label {
       background: #84b817;
-      border: solid 2px #84b817;
+      border: solid .3em #84b817;
     }
 
     input:checked ~ label {
@@ -145,7 +146,7 @@
   div:nth-child(8) {
     label {
       background: #0098d4;
-      border: solid 2px #0098d4;
+      border: solid .3em #0098d4;
     }
 
     input:checked ~ label {
