@@ -45,17 +45,23 @@
   gap: 1.1em 0.4em;
 
   input {
-    display: none;
+    transform: translateX(calc(100% + 1em));
   }
 
   > div {
     box-sizing: border-box;
+    margin-left: -1em;
 
     > label {
-      transition: all 0.3s ease-in-out;
+      vertical-align: middle;
+      transition: all 0.15s ease-in-out;
       border-radius: 0.2em;
       box-sizing: border-box;
-      padding: 0.1em;
+      padding: 0.1em 0.1em 0.1em 2em;
+    }
+
+    > input {
+      vertical-align: middle;
     }
   }
 
@@ -156,7 +162,7 @@
 
 
   input + label {
-    background: white;
+    background: #fffffff3;
   }
 
   input:checked + label {
