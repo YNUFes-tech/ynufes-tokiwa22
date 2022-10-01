@@ -39,7 +39,7 @@
 </template>
 <style scoped lang="scss">
 .c-form {
-  font-size: 0.8em;
+  font-size: 0.9em;
   display: flex;
   flex-wrap: wrap;
   gap: 1.1em 0.4em;
