@@ -53,6 +53,7 @@
     margin-left: -1em;
 
     > label {
+      cursor: pointer;
       vertical-align: middle;
       transition: all 0.15s ease-in-out;
       border-radius: 0.2em;
