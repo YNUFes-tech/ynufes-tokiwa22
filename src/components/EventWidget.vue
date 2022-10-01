@@ -108,36 +108,35 @@ const genreIcons = {
     }
 
     > .event_genre_1 {
-      background-color: #004b79;
+      background-color: #b36305;
     }
 
     > .event_genre_2 {
-      background-color: #7f181b;
+      background-color: #e32017;
     }
 
     > .event_genre_3 {
-      background-color: #56a0d3;
+      background-color: #00782a;
     }
 
     > .event_genre_4 {
-      background-color: #537b35;
+      background-color: #003688;
     }
 
     > .event_genre_5 {
-      background-color: #ecb731;
+      background-color: #9b0056;
     }
 
     > .event_genre_6 {
-      background-color: #b4a996;
-      color: black;
+      background-color: #ee7c0e;
     }
 
     > .event_genre_7 {
-      background-color: #d7d7d8;
+      background-color: #84b817;
     }
 
     > .event_genre_8 {
-      background-color: #6d6e70;
+      background-color: #0098d4;
     }
   }
 
