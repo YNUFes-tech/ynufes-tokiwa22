@@ -61,6 +61,7 @@ const genreIcons = {
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
     width: 100%;
+    aspect-ratio: 1;
   }
 
   > .tag_area {
@@ -73,6 +74,7 @@ const genreIcons = {
 
     > .event_genre {
       .event_genre_icon {
+        aspect-ratio: 1;
         vertical-align: middle;
         height: 1.2em;
         margin: 0.1em 0 0.1em 0.1em;
