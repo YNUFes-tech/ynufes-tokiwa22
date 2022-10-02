@@ -49,6 +49,8 @@ const genreIcons = {
 
 <style lang="scss" scoped>
 .event_widget {
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   width: 13.4em;
   background: #00000077;
