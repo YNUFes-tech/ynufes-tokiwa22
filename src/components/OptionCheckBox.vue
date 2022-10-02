@@ -1,38 +1,51 @@
 <script setup>
+import {ref} from "vue";
+
+const props = defineProps(
+    {
+      selection: {
+        type: Array,
+        required: false,
+        default: () => [true, true, true, true, true, true, true, true]
+      }
+    }
+)
+const selection = ref(props.selection)
+defineExpose({selection})
 </script>
 
 <template>
   <form class="c-form">
     <div>
-      <input id="event_genre-1" type="checkbox">
+      <input id="event_genre-1" type="checkbox" v-model="selection[0]">
       <label class="c-form-input" for="event_genre-1">展示・体験・販売</label>
     </div>
     <div>
-      <input id="event_genre-2" type="checkbox">
+      <input id="event_genre-2" type="checkbox" v-model="selection[1]">
       <label class="c-form-input" for="event_genre-2">パフォーマンス</label>
     </div>
     <div>
-      <input id="event_genre-3" type="checkbox">
+      <input id="event_genre-3" type="checkbox" v-model="selection[2]">
       <label class="c-form-input" for="event_genre-3">ゲーム・スポーツ</label>
     </div>
     <div>
-      <input id="event_genre-4" type="checkbox">
+      <input id="event_genre-4" type="checkbox" v-model="selection[3]">
       <label class="c-form-input" for="event_genre-4">デザート</label>
     </div>
     <div>
-      <input id="event_genre-5" type="checkbox">
+      <input id="event_genre-5" type="checkbox" v-model="selection[4]">
       <label class="c-form-input" for="event_genre-5">鉄板・麺類</label>
     </div>
     <div>
-      <input id="event_genre-6" type="checkbox">
+      <input id="event_genre-6" type="checkbox" v-model="selection[5]">
       <label class="c-form-input" for="event_genre-6">ファストフード</label>
     </div>
     <div>
-      <input id="event_genre-7" type="checkbox">
+      <input id="event_genre-7" type="checkbox" v-model="selection[6]">
       <label class="c-form-input" for="event_genre-7">ドリンク</label>
     </div>
     <div>
-      <input id="event_genre-8" type="checkbox">
+      <input id="event_genre-8" type="checkbox" v-model="selection[7]">
       <label class="c-form-input" for="event_genre-8">ご飯もの</label>
     </div>
   </form>
@@ -51,14 +64,17 @@
   > div {
     box-sizing: border-box;
     margin-left: -1em;
+    vertical-align: middle;
 
     > label {
+      display: inline-block;
       cursor: pointer;
       vertical-align: middle;
       transition: all 0.15s ease-in-out;
       border-radius: 0.2em;
       box-sizing: border-box;
       padding: 0.1em 0.1em 0.1em 2em;
+      line-height: 1.7;
     }
 
     > input {
@@ -76,7 +92,6 @@
       background: #b36305;
     }
   }
-
 
   div:nth-child(2) {
     label {
