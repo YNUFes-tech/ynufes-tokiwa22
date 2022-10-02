@@ -1,6 +1,6 @@
 <script setup>
 
-import {onMounted} from "vue";
+// import {onMounted} from "vue";
 
 /**
  * 元のアニメーションは
@@ -14,23 +14,30 @@ import {onMounted} from "vue";
  * そのため、onMounted内、つまりすべての部品の配置が終わった後での動作を予約して
  * この問題を解消している。
  * 詳しくはVue Lifecycleを調べてみるとよい。
+ *
+ *
+ * (追記): パフォーマンスの問題により背景の星アニメーションについて削除
+ * 主にスマホにおいて背景の重さ故にカクつく現象が確認されたため、
+ * 星について廃止することとした(10/3/2022)
+ *
+ * なお、流星のアニメーションについては残すこととする。
  */
-onMounted(() => {
-  const wH = window.innerHeight
-  const wW = window.innerWidth
-  const generateStars = n => {
-    const background = document.getElementById("bg");
-
-    for (let i = 0; i < n; i++) {
-      const div = document.createElement('div')
-      div.className = i % 20 === 0 ? 'star star--big' : i % 9 === 0 ? 'star star--medium' : 'star'
-      // random everywhere!
-      div.setAttribute('style', `top:${Math.round(Math.random() * wH)}px;left:${Math.round(Math.random() * wW)}px;animation-duration:${Math.round(Math.random() * 3000) + 3000}ms;animation-delay:${Math.round(Math.random() * 3000)}ms;`)
-      background.appendChild(div)
-    }
-  }
-  generateStars(150)
-})
+// onMounted(() => {
+//   const wH = window.innerHeight
+//   const wW = window.innerWidth
+//   const generateStars = n => {
+//     const background = document.getElementById("bg");
+//
+//     for (let i = 0; i < n; i++) {
+//       const div = document.createElement('div')
+//       div.className = i % 20 === 0 ? 'star star--big' : i % 9 === 0 ? 'star star--medium' : 'star'
+//       // random everywhere!
+//       div.setAttribute('style', `top:${Math.round(Math.random() * wH)}px;left:${Math.round(Math.random() * wW)}px;animation-duration:${Math.round(Math.random() * 3000) + 3000}ms;animation-delay:${Math.round(Math.random() * 3000)}ms;`)
+//       background.appendChild(div)
+//     }
+//   }
+//   generateStars(150)
+// })
 </script>
 
 <template>
@@ -79,16 +86,16 @@ onMounted(() => {
   z-index: -10;
 }
 
-.star--medium {
-  width: 4px;
-  height: 4px;
-}
+/*.star--medium {*/
+/*  width: 4px;*/
+/*  height: 4px;*/
+/*}*/
 
-.star--big {
-  width: 5px;
-  height: 5px;
-  box-shadow: 0 0 40px 0 #EDCDA3, 0 0 20px 0 #FFFFFF, inset 0 0 4px #FFFFFF;
-}
+/*.star--big {*/
+/*  width: 5px;*/
+/*  height: 5px;*/
+/*  box-shadow: 0 0 40px 0 #EDCDA3, 0 0 20px 0 #FFFFFF, inset 0 0 4px #FFFFFF;*/
+/*}*/
 
 .comet {
   width: 6px;
