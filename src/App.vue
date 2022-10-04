@@ -9,6 +9,8 @@ import Background from "@/components/BackgroundComponent"
     <router-link to="/events">Events</router-link>
     |
     <router-link to="/detail">Detail</router-link>
+    |
+    <router-link to="/sp/karaoke">karaoke</router-link>
   </nav>
   <router-view class="router-view"/>
   <Background id="bg"/>
