@@ -30,6 +30,9 @@ watch(route, () => {
             <div>横浜国立大学 大学祭</div>
           </div>
         </router-link>
+        <router-link id="mobile_toggle" to="/">
+          <object height="40" width="40" data="/q.svg" type="image/svg+xml"></object>
+        </router-link>
         <button id="mobile_toggle" @click="toggleMenu">
           <svg aria-hidden="true" height="40" viewBox="0 0 30 30" width="40" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
@@ -51,13 +54,13 @@ watch(route, () => {
         <div class="sns">
           <a href="https://twitter.com/ynu_fes" target="_blank"><img alt="twitter"
                                                                      class="hover-to-shrink"
-                                                                     src="assets/sns/twitter_logo.webp"/></a>
+                                                                     src="@/assets/twitter_icon.png"/></a>
           <a href="https://www.instagram.com/ynu_fes" target="_blank"><img alt="instagram"
                                                                            class="hover-to-shrink"
-                                                                           src="assets/sns/instagram_logo.webp"/></a>
+                                                                           src="@/assets/instagram_icon.png"/></a>
           <a href="https://www.facebook.com/ynufes" target="_blank"><img alt="facebook"
                                                                          class="hover-to-shrink"
-                                                                         src="assets/sns/facebook_logo.png"/></a>
+                                                                         src="@/assets/facebook_icon.png"/></a>
         </div>
       </div>
     </transition>
@@ -103,7 +106,7 @@ header {
 
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: 60;
   background: #0009;
 }
 
@@ -113,7 +116,7 @@ header {
 }
 
 .mobileBack-enter-from, .mobileBack-leave-to {
-  opacity: 0;
+  opacity: 1;
 }
 
 .mobileMenu-enter-active, .mobileMenu-fade-active {
@@ -125,13 +128,14 @@ header {
 }
 
 #mobile_menu {
-  z-index: 100;
+  z-index: 99;
   transition: all 0.5s 0s ease-in-out;
   padding: 85px 20px;
   margin-right: 0;
   margin-left: auto;
   width: unquote("min(220px, 80vw)");
   height: 100vh;
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -141,7 +145,8 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1.3em;
-    padding: 10px;
+    margin-top: 0.3rem;
+    padding: 0.5rem;
     text-align: center;
     border-radius: 0.8rem;
   }
