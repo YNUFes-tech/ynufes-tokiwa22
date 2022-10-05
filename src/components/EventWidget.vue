@@ -15,15 +15,25 @@ const eventGenre = {
   7: "ドリンク",
   8: "ご飯もの",
 };
-
+const genreIcons = {
+  1: "exhibition.png",
+  2: "performance.png",
+  3: "dessert.png",
+  4: "dessert.png",
+  5: "noodle.png",
+  6: "fast_food.png",
+  7: "drink.png",
+  8: "rice.png"
+}
 </script>
 
 <template>
   <div class="event_widget">
     <img :src="`/icons/${eventData.event_id}.webp`"/>
     <div class="tag_area">
-      <div v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
-        {{ eventGenre[props.eventData.event_genre_id] }}
+      <div class="event_genre" v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
+        <img class="event_genre_icon" :src="`/icons/events/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
+        <span>{{ eventGenre[props.eventData.event_genre_id] }}</span>
       </div>
       <div v-bind:class="event_place_text_keiei">{{ props.eventData.event_place_text }}</div>
     </div>
@@ -45,98 +55,112 @@ const eventGenre = {
   position: relative;
   text-overflow: ellipsis;
 
-> img {
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
-  width: 100%;
-}
+  > img {
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    width: 100%;
+  }
 
-> .tag_area {
-  position: relative;
-  margin: 0.3rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.2rem;
+  > .tag_area {
+    position: relative;
+    margin: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
 
-> div {
-  font-size: unquote("max(0.6rem, 0.9em)");
-  color: white;
-  padding: 0.05rem 0.1rem;
-  border-radius: 0.4rem;
-  border: 0.08rem solid;
-  border-color: #ffffff99;
-}
+    > .event_genre {
+      .event_genre_icon {
+        vertical-align: middle;
+        height: 1.2em;
+        margin: 0.1em 0 0.1em 0.1em;
+        object-fit: contain;
+      }
 
-> .event_place_text_toshi {
-  background-color: #00adb5;
-}
+      > span {
+        margin-left: 0.1em;
+      }
+    }
 
-> .event_place_text_keizai {
-  background-color: #ff5722;
-}
+    > div {
+      vertical-align: middle;
+      font-size: unquote("max(0.6rem, 0.9em)");
+      color: white;
+      padding: 0.1em 0.3em;
+      border-radius: 0.4em;
+      border: 0.08em solid #ffffff99;
+    }
 
-> .event_place_text_keiei {
-  background-color: #eeeeee;
-  color: black;
-}
 
-> .event_genre_1 {
-  background-color: #004b79;
-}
+    > .event_place_text_toshi {
+      background-color: #00adb5;
+    }
 
-> .event_genre_2 {
-  background-color: #7f181b;
-}
+    > .event_place_text_keizai {
+      background-color: #ff5722;
+    }
 
-> .event_genre_3 {
-  background-color: #56a0d3;
-}
+    > .event_place_text_keiei {
+      background-color: #eeeeee;
+      color: black;
+    }
 
-> .event_genre_4 {
-  background-color: #537b35;
-}
+    > .event_genre_1 {
+      background-color: #004b79;
+    }
 
-> .event_genre_5 {
-  background-color: #ecb731;
-}
+    > .event_genre_2 {
+      background-color: #7f181b;
+    }
 
-> .event_genre_6 {
-  background-color: #b4a996;
-  color: black;
-}
+    > .event_genre_3 {
+      background-color: #56a0d3;
+    }
 
-> .event_genre_7 {
-  background-color: #d7d7d8;
-}
+    > .event_genre_4 {
+      background-color: #537b35;
+    }
 
-> .event_genre_8 {
-  background-color: #6d6e70;
-}
-}
+    > .event_genre_5 {
+      background-color: #ecb731;
+    }
 
-> .meta_area {
-  color: white;
-  margin: 0.7em;
+    > .event_genre_6 {
+      background-color: #b4a996;
+      color: black;
+    }
 
-h2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  max-height: 2.8rem;
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  font-size: 1.2em;
-  line-height: 1.4rem;
-  padding: 0;
-  margin: 0;
-}
-}
+    > .event_genre_7 {
+      background-color: #d7d7d8;
+    }
 
-> hr {
-  margin: 0;
-  padding: 0;
-}
+    > .event_genre_8 {
+      background-color: #6d6e70;
+    }
+  }
+
+  > .meta_area {
+    color: white;
+    margin: 0.7em;
+
+    h2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      max-height: 2.8rem;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      font-size: 1.2em;
+      line-height: 1.4rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  > hr {
+    margin: 0;
+    padding: 0;
+  }
 
 }
 </style>

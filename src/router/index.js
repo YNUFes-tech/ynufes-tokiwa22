@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import KaraokeView from "@/views/KaraokeView";
+import EventsByLocation from "@/views/EventsByLocation";
 
 const routes = [
   {
@@ -21,7 +22,12 @@ const routes = [
     component: EventDetailView,
     props: route => {
       return {...route.params, eventId: parseInt(route.params.id)}
-    }
+    },
+  },
+  {
+    path: '/search/location',
+    name: 'SearchByLocation',
+    component: EventsByLocation
   },
   {
     path:'/sp/karaoke',
