@@ -4,6 +4,7 @@ import HeaderView from "@/components/HeaderView";
 </script>
 
 <template>
+
   <HeaderView class="fadeUp" id="header"/>
   <router-view class="router-view"/>
   <Background id="bg"/>
