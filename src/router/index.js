@@ -1,8 +1,8 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-// eslint-disable-next-line no-unused-vars
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
+import KaraokeView from "@/views/KaraokeView";
 import EventsByLocation from "@/views/EventsByLocation";
 
 const routes = [
@@ -28,6 +28,11 @@ const routes = [
     path: '/search/location',
     name: 'SearchByLocation',
     component: EventsByLocation
+  },
+  {
+    path:'/sp/karaoke',
+    name: '',
+    component: KaraokeView
   }
 ]
 
