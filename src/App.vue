@@ -1,22 +1,19 @@
 <script setup>
 import Background from "@/components/BackgroundComponent"
+import HeaderView from "@/components/HeaderView";
 </script>
 
 <template>
-  <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/events">Events</router-link>
-    |
-    <router-link to="/detail">Detail</router-link>
-    |
-    <router-link to="/sp/karaoke">karaoke</router-link>
-  </nav>
+
+  <HeaderView class="fadeUp" id="header"/>
   <router-view class="router-view"/>
   <Background id="bg"/>
 </template>
 
 <style>
+body {
+  margin: 0 auto;
+}
 #app {
   font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
@@ -40,8 +37,12 @@ nav a.router-link-exact-active {
 
 
 .router-view {
-  width: calc(100vw - 1rem);
+  width: 100vw;
   margin: 0 auto;
+  padding-top: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 50;
 }
 
 html, body {
