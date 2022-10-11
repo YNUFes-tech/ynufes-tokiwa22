@@ -46,7 +46,7 @@ export default {
 <style scoped>
 
 .title > p{
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 p{
