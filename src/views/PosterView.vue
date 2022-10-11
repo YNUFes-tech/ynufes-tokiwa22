@@ -1,7 +1,9 @@
 <template>
 <div class="root-wrapper">
-  <h1>22常盤祭ポスター展覧会</h1>
-  <p>22常盤祭開催にあたり計4点のポスター案の応募をいただきました。<br>選考の結果、今回のポスターは以下の作品に決定しました。</p>
+  <div class="title">
+    <StarTitle title="22常盤祭ポスター展覧会" color="#ecece5b3" />
+    <p>22常盤祭開催にあたり計4点のポスター案の応募をいただきました。<br>選考の結果、今回のポスターは以下の作品に決定しました。</p>
+  </div>
   <div class="selected">
     <img src="@/assets/poster.png">
     <p>経営学部経営学科2年<br><span>よる</span>さんの作品</p>
@@ -34,12 +36,18 @@
 </template>
 
 <script>
+import StarTitle from "@/components/StarTitle";
 export default {
-  name: "PosterView"
+  name: "PosterView",
+  components: {StarTitle}
 }
 </script>
 
 <style scoped>
+
+.title > p{
+  padding-top: 100px;
+}
 
 p{
   line-height: 3rem;
