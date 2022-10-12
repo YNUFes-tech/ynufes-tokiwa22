@@ -37,7 +37,6 @@ nav a.router-link-exact-active {
 
 
 .router-view {
-  width: 100vw;
   margin: 0 auto;
   padding-top: 70px;
   position: fixed;
