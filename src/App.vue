@@ -39,6 +39,7 @@ onMounted(() => {
 body {
   margin: 0 auto;
 }
+
 #app {
   font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
@@ -64,7 +65,6 @@ nav a.router-link-exact-active {
 .router-view {
   margin: 0 auto;
   padding-top: 70px;
-  position: fixed;
   top: 0;
   z-index: 50;
 }
