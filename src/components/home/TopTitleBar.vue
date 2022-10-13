@@ -12,7 +12,7 @@
 #top-title-bar {
   width: 100vw;
   position: relative;
-  height: 600px;
+  padding-bottom: 30px;
   margin: 0 auto;
   justify-self: center;
 
