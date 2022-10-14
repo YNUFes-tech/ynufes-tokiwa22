@@ -3,11 +3,17 @@
     <div>
       <div class="title">星彩</div>
       <div class="date">
-        <p class="date-text">
-          事前予約制
-          <br>
-          2022.9.28(金)~30(日)<br>@横浜国立大学
-        </p>
+        <div class="date-text">
+          <div>
+            事前予約制
+          </div>
+          <div>
+            2022.9.28(金)~30(日)
+          </div>
+          <div>
+            @横浜国立大学
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -16,7 +22,7 @@
 <style scoped lang="scss">
 
 #top-title-bar {
-  width: 100vw;
+  width: 100%;
   position: relative;
   display: flex;
   padding-bottom: 30px;
@@ -33,10 +39,13 @@
     }
 
     .date {
+      display: flex;
+      flex-direction: column;
       padding-top: 10px;
       text-align: end;
-      margin: 0 3em;
+      margin: 1.5em 3em 1.8em 3em;
       font-size: 20px;
+      align-items: flex-end;
     }
   }
 }
@@ -49,27 +58,48 @@
 
     > div {
       flex-direction: row;
-      width: 100%;
       align-items: center;
-
+      justify-content: center;
+      width: 100%;
+      height: 100%;
       .title {
         width: 50%;
         margin: 0;
+        max-width: 400px;
         text-align: right;
         font-size: min(150px, 20vw);
       }
 
       .date {
+        max-width: 20em;
         width: 50%;
         margin: 0;
         align-self: flex-end;
         display: flex;
         font-size: 24px;
         justify-content: center;
+        padding: 0 2em;
+        box-sizing: border-box;
       }
-      .date-text{
+
+      .date-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        > div {
+          padding: 0.1em;
+          background: rgba(41, 55, 70, 0.77);
+          width: fit-content;
+        }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #top-title-bar {
+    height: 500px;
   }
 }
 
