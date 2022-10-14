@@ -39,17 +39,18 @@ const access = async function (id) {
           slidesPerView: 3,
           spaceBetween: 5,
           },
-          800: {
+          768: {
           slidesPerView: 4,
-          spaceBetween: 20,
+          spaceBetween: 10,
           },
 
           }"
           :loop="true"
           :slidesPerGroup="2"
           :slidesPerView="2"
-          :spaceBetween="10"
-          class="sponsorsSwiper">
+          :spaceBetween="0"
+          class="sponsorsSwiper"
+  style="margin: 0 auto">
 
     <swiper-slide v-for="ad in store.state.sponsors" :key="ad.id">
       <a :href="`${ad.url?ad.url:''}`" rel="noopener noreferrer"
@@ -64,7 +65,7 @@ const access = async function (id) {
 <style lang="scss">
 
 .swiper {
-  max-width: 50rem;
+  max-width: min(1000px, 90vw);
   width: 100vw;
   height: 100%;
 }
