@@ -31,13 +31,16 @@ onMounted(() => {
 })
 </script>
 <template>
-  <div class="star-animation-title star-animation">
+  <div class="star-title star-animation-title star-animation">
     <div class="star-animation-title-text">{{ props.title }}</div>
     <div class="star-animation-title-tail" :style="tailColor"/>
   </div>
 </template>
 
 <style scoped lang="scss">
+.star-title{
+  height: 2.3em;
+}
 .star-animation-title-tail {
   width: 100%;
   height: 5px;
