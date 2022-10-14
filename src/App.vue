@@ -5,6 +5,10 @@ import {useStore} from "vuex";
 import {onMounted} from "vue";
 import {createClient} from "microcms-js-sdk";
 
+window.onload = function () {
+  const loader = document.getElementById('loader');
+  loader.classList.add('loaded');
+}
 
 const store = useStore();
 
