@@ -4,6 +4,8 @@ import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import KaraokeView from "@/views/KaraokeView";
 import EventsByLocation from "@/views/EventsByLocation";
+import AccessPage from "@/views/AccessPage";
+import ReservationInfo from "@/views/ReservationInfo";
 
 const routes = [
   {
@@ -33,6 +35,16 @@ const routes = [
     path:'/sp/karaoke',
     name: '',
     component: KaraokeView
+  },
+  {
+    path: '/access',
+    name:'AccessPage',
+    component: AccessPage
+  },
+  {
+    path: '/reservation',
+    name: 'ReservationInfo',
+    component: ReservationInfo
   }
 ]
 
