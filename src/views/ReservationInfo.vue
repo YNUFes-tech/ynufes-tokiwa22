@@ -1,5 +1,5 @@
 <template>
-  <div class="ticket-info-frame" @click="null">
+  <div class="ticket-info-frame fade-up" @click="null">
     <h1><span>22常盤祭は</span><span><b>事前予約制</b><span>です!!</span></span></h1>
     <div class="modal-content">
       <p>
@@ -19,14 +19,14 @@
       </div>
       <h2>定員について</h2>
       <ul>
-        <li>大学側との競技により1日当たり<b>4000人</b>となります。</li>
+        <li>大学側との協議により1日当たり<b>4000人</b>となります。</li>
         <li><b>当日枠等は設けておりません</b>。来場をご希望の方は<b>必ず</b>事前予約をお願いいたします。</li>
       </ul>
       <h2>チケットについて</h2>
       <ul>
         <li>4歳以上の方のご入場には、一人一枚ずつのチケットが必要です。(3歳までのお子様は保護者の方と一緒にご入場できます。)</li>
-        <li>22常盤祭の来場チケットは、<b>メール宛にお送りするQRコード</b>です。当日は入場・退場ジに読み取ることで受付を行います。</li>
-        <li>多くの方にご入場いただくため、各日程一人一枚のお申込みとなります(複数日程の申し込みは可能です。)</li>
+        <li>22常盤祭の来場チケットは、<b>メール宛にお送りするQRコード</b>です。当日は入場・退場時に読み取ることで受付を行います。</li>
+        <li>多くの方にご入場いただくため、各日程１人１枚のお申込みとなります(複数日程の申し込みは可能です。)</li>
         <li>お連れ様と一緒にお申込みいただけます(4人まで)</li>
       </ul>
       <h2>抽選について</h2>
@@ -35,7 +35,7 @@
         <li><b>落選の方は申し訳ありませんがご来場頂けません</b>。企画によって配信の予定もございますのでそちらもご覧ください。</li>
       </ul>
     </div>
-    <div class="back-button" @click="showModal=!showModal">トップに戻る</div>
+    <router-link class="back-button" to="/">トップに戻る</router-link>
   </div>
 </template>
 
@@ -126,7 +126,13 @@ export default {
   }
 
   .back-button {
-    border-color: #25254d;
+    text-decoration: none;
+    padding: 0.8em 2em;
+    border-radius: 2em;
+    border: solid 0.1em  #25254d;
+    width: fit-content;
+    margin: 1em auto;
+    font-size: 1.3em;
     color: #25254d;
     font-weight: bold;
   }
@@ -158,17 +164,25 @@ export default {
       }
     }
   }
-
 }
 
-.back-button {
-  color: white;
-  padding: 0.8em 2em;
-  border-radius: 2em;
-  border: solid 0.1em white;
-  width: fit-content;
-  margin: 1em auto;
-  font-size: 1.3em;
+.fade-up {
+  animation-delay: 0.5s;
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
