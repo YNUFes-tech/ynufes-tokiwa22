@@ -31,26 +31,32 @@ const access = async function (id) {
 }
 </script>
 <template>
-  <swiper v-if="store.state.sponsors.length!==0" :autoplay="{
+  <swiper v-show="store.state.sponsors.length!==0"
+          :autoplay="{
   delay: 4500,
-  disableOnInteraction: false,
-  }" :breakpoints="{
+  disableOnInteraction: true,
+  }"
+          :breakpoints="{
+          300: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 5,
+          },
           430: {
           slidesPerView: 3,
-          spaceBetween: 5,
+          slidesPerGroup: 3,
+          spaceBetween: 8,
           },
           768: {
           slidesPerView: 4,
+          slidesPerGroup: 2,
           spaceBetween: 10,
           },
-
           }"
+
           :loop="true"
-          :slidesPerGroup="2"
-          :slidesPerView="2"
-          :spaceBetween="0"
           class="sponsorsSwiper"
-  style="margin: 0 auto">
+          style="margin: 0 auto">
 
     <swiper-slide v-for="ad in store.state.sponsors" :key="ad.id">
       <a :href="`${ad.url?ad.url:''}`" rel="noopener noreferrer"
