@@ -29,7 +29,7 @@ const genreIcons = {
 
 <template>
   <div class="event_widget">
-    <img :src="`/icons/${eventData.event_id}.webp`"/>
+    <img :src="`/data/icons/events/${eventData.event_id}.webp`"/>
     <div class="tag_area">
       <div class="event_genre" v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
         <img class="event_genre_icon" :src="`/icons/events/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
