@@ -9,17 +9,11 @@ import 'swiper/css/autoplay'
 // import Swiper core and required modules
 import SwiperCore, {Autoplay} from 'swiper';
 import store from "@/store";
-// install Swiper modules
 SwiperCore.use([Autoplay]);
-
-// eslint-disable-next-line no-unused-vars
 const randomList = function (rand) {
   return rand.map(value => ({value, sort: Math.random()}))
       .sort((a, b) => a.sort - b.sort)
       .map(({value}) => value);
-  // return rand.sort(function () {
-  //   return 0.5 - Math.random()
-  // });
 }
 
 const access = async function (id) {
@@ -33,7 +27,7 @@ const access = async function (id) {
 <template>
   <swiper v-show="store.state.sponsors.length!==0"
           :autoplay="{
-  delay: 4500,
+  delay: 6000,
   disableOnInteraction: true,
   }"
           :breakpoints="{
@@ -58,7 +52,7 @@ const access = async function (id) {
           class="sponsorsSwiper"
           style="margin: 0 auto">
 
-    <swiper-slide v-for="ad in store.state.sponsors" :key="ad.id">
+    <swiper-slide v-for="ad in randomList(store.state.sponsors)" :key="ad.id">
       <a :href="`${ad.url?ad.url:''}`" rel="noopener noreferrer"
          target="_blank"
          v-on:click="access(`${ad.sponsors}`)">
