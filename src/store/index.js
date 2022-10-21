@@ -7,7 +7,6 @@ export default createStore({
   getters: {},
   mutations: {
     setSponsors(state, newSponsors) {
-      console.log(state.sponsors)
       state.sponsors = newSponsors;
     },
   },
