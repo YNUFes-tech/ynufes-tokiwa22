@@ -13,13 +13,14 @@ window.onload = function () {
 const store = useStore();
 
 const client = createClient({
-  serviceDomain: "tokiwa22", // YOUR_DOMAIN is the XXXX part of XXXX.microcms.io
+  serviceDomain: "tokiwa22",
   apiKey: "7a49d7576cff4c6e978c2be8e60b789c8b0b",
 });
 
 function getLatestSponsors() {
   client.get({
-    endpoint: 'banner'
+    endpoint: 'banner',
+    queries: {limit: 20},
   }).then((data) => {
         store.commit('setSponsors', data.contents);
       }
