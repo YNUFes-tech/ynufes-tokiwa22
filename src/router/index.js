@@ -1,11 +1,19 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+// eslint-disable-next-line no-unused-vars
 import EventDetailView from '../views/EventDetailView'
+// eslint-disable-next-line no-unused-vars
 import EventListView from '../views/EventListView'
+// eslint-disable-next-line no-unused-vars
 import KaraokeView from "@/views/KaraokeView";
+// eslint-disable-next-line no-unused-vars
 import EventsByLocation from "@/views/EventsByLocation";
+// eslint-disable-next-line no-unused-vars
 import AccessPage from "@/views/AccessPage";
 import ReservationInfo from "@/views/ReservationInfo";
+import UnderConstruction from "@/views/UnderConstruction";
+// eslint-disable-next-line no-unused-vars
+import EventsAndStage from "@/views/EventsAndStage";
 
 const routes = [
   {
@@ -16,7 +24,8 @@ const routes = [
   {
     path: '/events',
     name: 'EventListView',
-    component: EventListView
+    // component:UnderConstruction
+    component: EventListView,
   },
   {
     path: '/event/:id',
@@ -25,27 +34,47 @@ const routes = [
     props: route => {
       return {...route.params, eventId: parseInt(route.params.id)}
     },
+    // component: UnderConstruction
   },
   {
-    path: '/search/location',
+    path: '/events/location',
     name: 'SearchByLocation',
     component: EventsByLocation
+    // component: UnderConstruction
   },
   {
-    path:'/sp/karaoke',
+    path: '/sp/karaoke',
     name: '',
     component: KaraokeView
+    // component: UnderConstruction
   },
   {
     path: '/access',
-    name:'AccessPage',
+    name: 'AccessPage',
     component: AccessPage
+    // component: UnderConstruction
   },
   {
     path: '/reservation',
     name: 'ReservationInfo',
     component: ReservationInfo
-  }
+  },
+  {
+    path: '/map',
+    name: 'Map',
+    component: UnderConstruction
+  },
+  {
+    path: '/time-table',
+    name: '',
+    component: UnderConstruction
+  },
+  {
+    path: '/events-and-stage',
+    name: '',
+    // component: EventsAndStage,
+    component: UnderConstruction
+  },
 ]
 
 const router = createRouter({

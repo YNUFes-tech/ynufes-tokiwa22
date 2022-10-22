@@ -1,7 +1,7 @@
 <script setup>
 
 import EventWidget from "@/components/EventWidget";
-import data from "@/assets/eventData.json";
+import data from "@/assets/events.json";
 import OptionCheckBox from "@/components/OptionCheckBox";
 import {computed, ref} from "vue";
 
@@ -15,7 +15,6 @@ const toggleCheckbox = () => {
 const optionCheckBox = ref(null)
 const events = computed(() => {
   if (!optionCheckBox.value) return [];
-  console.log(optionCheckBox.value)
   return data.filter((d) => {
         return optionCheckBox.value.selection[d.event_genre_id - 1]
       }
@@ -26,7 +25,7 @@ const events = computed(() => {
   <div class="root-wrapper">
     <div class="filter-box">
       <div class="search-button-row">
-        <div style="padding: 1.2em">検索</div>
+        <div style="padding: 1.2em" @click="toggleCheckbox">企画場所</div>
         <div style="padding: 1.2em" @click="toggleCheckbox">カテゴリー</div>
       </div>
       <div class="checkbox-frame" :class="{'checkbox-frame-show': showCheckbox, 'checkbox-frame-close': closeCheckbox}">
@@ -122,7 +121,6 @@ const events = computed(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
   width: 100%;
 }
 
