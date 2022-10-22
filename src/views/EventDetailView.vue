@@ -1,5 +1,5 @@
 <script setup>
-import data from "@/assets/eventData.json"
+import data from "@/assets/events.json"
 
 const props = defineProps({
   eventId: {
