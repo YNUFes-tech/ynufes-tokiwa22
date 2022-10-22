@@ -1,9 +1,9 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
 // eslint-disable-next-line no-unused-vars
-import EventDetailView from '../views/EventDetailView'
+import EventDetailView from "../views/EventDetailView";
 // eslint-disable-next-line no-unused-vars
-import EventListView from '../views/EventListView'
+import EventListView from "../views/EventListView";
 // eslint-disable-next-line no-unused-vars
 import KaraokeView from "@/views/KaraokeView";
 import PosterView from "@/views/PosterView";
@@ -18,74 +18,83 @@ import EventsAndStage from "@/views/EventsAndStage";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
   {
-    path: '/events',
-    name: 'EventListView',
+    path: "/events",
+    name: "EventListView",
     // component:UnderConstruction
     component: EventListView,
   },
   {
-    path: '/event/:id',
-    name: 'EventDetailView',
+    path: "/event/:id",
+    name: "EventDetailView",
     component: EventDetailView,
-    props: route => {
-      return {...route.params, eventId: parseInt(route.params.id)}
+    props: (route) => {
+      return { ...route.params, eventId: parseInt(route.params.id) };
     },
     // component: UnderConstruction
   },
   {
-    path: '/events/location',
-    name: 'SearchByLocation',
-    component: EventsByLocation
+    path: "/events/location",
+    name: "SearchByLocation",
+    component: EventsByLocation,
     // component: UnderConstruction
   },
   {
-    path: '/sp/karaoke',
-    name: '',
-    component: KaraokeView
+    path: "/sp/karaoke",
+    name: "",
+    component: KaraokeView,
   },
   {
-    path: '/poster',
-    name: '',
+    path: "/poster",
+    name: "",
     // component: UnderConstruction
-    component: PosterView
+    component: PosterView,
   },
   {
-    path: '/access',
-    name: 'AccessPage',
-    component: AccessPage
+    path: "/access",
+    name: "AccessPage",
+    component: AccessPage,
     // component: UnderConstruction
   },
   {
-    path: '/reservation',
-    name: 'ReservationInfo',
-    component: ReservationInfo
+    path: "/reservation",
+    name: "ReservationInfo",
+    component: ReservationInfo,
   },
   {
-    path: '/map',
-    name: 'Map',
-    component: UnderConstruction
+    path: "/map",
+    name: "Map",
+    component: UnderConstruction,
   },
   {
-    path: '/time-table',
-    name: '',
-    component: UnderConstruction
+    path: "/time-table",
+    name: "",
+    component: UnderConstruction,
   },
   {
-    path: '/events-and-stage',
-    name: '',
+    path: "/events-and-stage",
+    name: "",
     // component: EventsAndStage,
-    component: UnderConstruction
+    component: UnderConstruction,
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return {
+        top: 0,
+      };
+    }
+  },
+});
 
-export default router
+export default router;
