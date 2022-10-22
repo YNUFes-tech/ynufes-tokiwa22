@@ -24,7 +24,7 @@ const props = defineProps({
   width: 15em;
   display: flex;
   align-items: center;
-  background: #42b983;
+  background: #909090;
   border-radius: 10px;
   height: 40px;
   padding: 0.3em;

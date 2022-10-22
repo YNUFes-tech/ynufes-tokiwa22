@@ -34,10 +34,10 @@ onMounted(() => {
 </script>
 
 <template>
-
   <HeaderView class="fadeUp" id="header"/>
   <router-view class="router-view"/>
   <Background id="bg"/>
+  <!--  <FooterComponent/>-->
 </template>
 
 <style>
@@ -46,11 +46,13 @@ body {
 }
 
 #app {
+  top: 0;
   font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
+  position: relative;
 }
 
 nav {
@@ -68,8 +70,7 @@ nav a.router-link-exact-active {
 
 
 .router-view {
-  margin: 0 auto;
-  padding-top: 70px;
+  margin: 80px auto 0 auto;
   top: 0;
   z-index: 50;
 }
@@ -92,5 +93,29 @@ html, body {
   z-index: -100;
 }
 
+
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.fade-up {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 </style>

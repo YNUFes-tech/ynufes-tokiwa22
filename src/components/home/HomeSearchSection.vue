@@ -2,12 +2,11 @@
   <div class="home-event-search-section">
     <StarTitle title="企画を探す" class="star-title"/>
     <div class="genre-buttons">
-      <a>展示</a>
-      <a>飲食</a>
-      <a>パフォーマンス</a>
-      <a>ゲーム・スポーツ</a>
+      <router-link to="/events">展示</router-link>
+      <router-link to="/events">飲食</router-link>
+      <router-link to="/events">パフォーマンス</router-link>
+      <router-link to="/events">ゲーム・スポーツ</router-link>
     </div>
-    <input class="search-bar">
   </div>
 </template>
 <style scoped lang="scss">
@@ -15,6 +14,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: rgba(21, 21, 35, 0.7);
+  border-radius: 2em;
 
   .star-title {
     margin: .5em auto;
@@ -28,9 +29,12 @@
     gap: 0.5em;
 
     > a {
+      text-decoration: none;
+      color: white;
       height: 2em;
       font-size: 1.2em;
       width: 40%;
+      line-height: 2;
       border-radius: 0.5em;
       background: #2c3e50;
       padding: 0.5em;

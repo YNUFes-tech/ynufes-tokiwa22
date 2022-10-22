@@ -25,6 +25,32 @@ const genreIcons = {
   7: "drink.png",
   8: "rice.png"
 }
+
+function getPlaceName(e) {
+  let place_name = "";
+  switch (e.event_place_id) {
+    case "AB":
+    case "CD":
+    case "EF":
+      place_name = "メインストリート";
+      break;
+    case "H":
+      place_name = "大学会館周辺";
+      break;
+    case "KK":
+      place_name = "経済経営";
+      break;
+    case "T":
+      place_name = "都市";
+      break;
+    case "Y":
+      place_name = "野外音楽堂";
+      break;
+    case "Z":
+      place_name="その他"
+  }
+  return place_name + e.event_pamphlet_id
+}
 </script>
 
 <template>
@@ -32,10 +58,10 @@ const genreIcons = {
     <img :src="`/data/icons/events/${eventData.event_id}.webp`"/>
     <div class="tag_area">
       <div class="event_genre" v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
-        <img class="event_genre_icon" :src="`/icons/events/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
+        <img class="event_genre_icon" :src="`/data/icons/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
         <span>{{ eventGenre[props.eventData.event_genre_id] }}</span>
       </div>
-      <div v-bind:class="event_place_text_keiei">{{ props.eventData.event_place_text }}</div>
+      <div v-bind:class="event_place_text_keiei">{{ getPlaceName(props.eventData) }}</div>
     </div>
     <div class="meta_area">
       <h2 v-text="`${props.eventData.event_title}`" style="white-space: pre-wrap"/>
@@ -58,6 +84,7 @@ const genreIcons = {
   text-overflow: ellipsis;
 
   > img {
+    background: white;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
     width: 100%;

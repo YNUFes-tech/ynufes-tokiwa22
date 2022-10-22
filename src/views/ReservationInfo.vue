@@ -1,5 +1,5 @@
 <template>
-  <div class="ticket-info-frame fade-up" @click="null">
+  <div class="content fade-up" @click="null">
     <h1><span>22常盤祭は</span><span><b>事前予約制</b><span>です!!</span></span></h1>
     <div class="modal-content">
       <p>
@@ -51,8 +51,7 @@ export default {
   overflow-x: hidden;
 }
 
-.ticket-info-frame {
-  margin: auto;
+.content {
   box-sizing: border-box;
   width: min(90%, 50rem);
   background: white;
