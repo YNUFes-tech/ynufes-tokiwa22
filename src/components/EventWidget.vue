@@ -92,11 +92,9 @@ function getPlaceName(e) {
   }
 
   > .tag_area {
-    position: relative;
-    margin: 0.3rem;
+    margin: 0.3rem 1rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.2rem;
 
     > .event_genre {
