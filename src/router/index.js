@@ -6,6 +6,7 @@ import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 // eslint-disable-next-line no-unused-vars
 import KaraokeView from "@/views/KaraokeView";
+import PosterView from "@/views/PosterView";
 // eslint-disable-next-line no-unused-vars
 import EventsByLocation from "@/views/EventsByLocation";
 // eslint-disable-next-line no-unused-vars
@@ -46,7 +47,12 @@ const routes = [
     path: '/sp/karaoke',
     name: '',
     component: KaraokeView
+  },
+  {
+    path: '/poster',
+    name: '',
     // component: UnderConstruction
+    component: PosterView
   },
   {
     path: '/access',
