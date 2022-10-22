@@ -1,18 +1,17 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <h2>
-    <slot/>
+    <slot />
   </h2>
 </template>
 
 <style scoped>
 h2 {
   font-weight: bolder;
-  font-size: 1.8em;
+  font-size: 1.2rem;
   width: fit-content;
-  margin: 0.5em auto;
+  /* margin: 0.5em auto 1.5em; */
 }
 
 h2:after {
