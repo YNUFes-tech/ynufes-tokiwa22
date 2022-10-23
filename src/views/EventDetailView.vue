@@ -89,16 +89,16 @@ function getPlaceName(e) {
         <a :href="`https://facebook.com/` + eventData.sns_facebook" class="SNS-icon c-btn" target="_blank"
            v-show="eventData.sns_facebook"
            rel="noopener noreferrer">
-          <img src="@/assets/facebook_icon.png" alt="Facebookボタン">
+          <img src="@/assets/sns/facebook_icon.png" alt="Facebookボタン">
         </a>
         <a :href="`https://twitter.com/` + eventData.sns_twitter" class="SNS-icon c-btn" target="_blank"
            v-show="eventData.sns_twitter"
            rel="noopener noreferrer">
-          <img src="@/assets/twitter_icon.png" alt="Twitterボタン">
+          <img src="@/assets/sns/twitter_icon.png" alt="Twitterボタン">
         </a>
         <a :href="`https://instagram.com/` + eventData.sns_instagram" class="SNS-icon c-btn" target="_blank"
            v-show="eventData.sns_instagram" rel="noopener noreferrer">
-          <img src="@/assets/instagram_icon.png" alt="Instagramボタン">
+          <img src="@/assets/sns/instagram_icon.png" alt="Instagramボタン">
         </a>
       </div>
     </div>

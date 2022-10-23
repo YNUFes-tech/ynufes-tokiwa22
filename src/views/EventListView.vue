@@ -22,7 +22,7 @@ const events = computed(() => {
 })
 </script>
 <template>
-  <div class="root-wrapper">
+  <div class="root-wrapper fade-up">
     <div class="filter-box">
       <div class="search-button-row">
         <div style="padding: 1.2em" @click="toggleCheckbox">企画場所</div>
