@@ -6,7 +6,6 @@ import {useRoute} from "vue-router";
 
 let mToggled = ref(false);
 
-// eslint-disable-next-line no-unused-vars
 function toggleMenu() {
   mToggled.value = !mToggled.value;
 }
@@ -23,65 +22,218 @@ watch(route, () => {
 <template>
   <div id="header_wrapper">
     <header>
-      <div id="header_top">
+      <div class="header_top">
+        <button id="mobile_toggle" @click="toggleMenu">
+          <svg aria-hidden="true" height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+                  stroke-width="2"></path>
+          </svg>
+        </button>
         <router-link id="site_title" to="/" @click="closeMenu">
-          <div id="logo-1">22常盤祭</div>
-          <div id="logo-2">横浜国立大学 大学祭</div>
+          <div class="logo1">
+            <div>22常盤祭</div>
+            <div>横浜国立大学 大学祭</div>
+          </div>
+          <div class="logo2">星彩</div>
         </router-link>
-<!--        <button id="mobile_toggle" @click="toggleMenu">-->
-<!--          <svg aria-hidden="true" height="40" viewBox="0 0 30 30" width="40" xmlns="http://www.w3.org/2000/svg">-->
-<!--            <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"-->
-<!--                  stroke-width="2"></path>-->
-<!--          </svg>-->
-<!--        </button>-->
       </div>
     </header>
+    <transition name="mobileMenu">
+      <div v-show="mToggled" id="mobile_menu">
+        <router-link active-class="selected" to="/" @click="closeMenu">ホーム</router-link>
+        <router-link to="/events" active-class="selected" @click="closeMenu">企画を見る</router-link>
+        <router-link active-class="selected" to="/pamphlet" @click="closeMenu">パンフレット</router-link>
+        <router-link active-class="selected" to="/sponsors" @click="closeMenu">ご協賛について</router-link>
+        <router-link active-class="selected" to="/others" @click="closeMenu">他大学祭の紹介</router-link>
+        <router-link active-class="selected" to="/reservation" @click="closeMenu">事前予約制について</router-link>
+        <div class="sns">
+          <a href="https://twitter.com/ynu_fes" target="_blank"><img alt="twitter"
+                                                                     class="hover-to-shrink"
+                                                                     src="@/assets/sns/twitter_logo.webp"/></a>
+          <a href="https://www.instagram.com/ynu_fes" target="_blank"><img alt="instagram"
+                                                                           class="hover-to-shrink"
+                                                                           src="@/assets/sns/instagram_logo.webp"/></a>
+          <a href="https://www.facebook.com/ynufes" target="_blank"><img alt="facebook"
+                                                                         class="hover-to-shrink"
+                                                                         src="@/assets/sns/facebook_logo.png"/></a>
+        </div>
+      </div>
+    </transition>
+    <transition name="mobileBack">
+      <div v-show="mToggled" class="header-back" @click="closeMenu"/>
+    </transition>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.header_active {
+  background: #03061A;
+}
+
 header {
+  padding-top: 1rem;
   z-index: 100;
   width: 100%;
   position: fixed;
-}
-
-
-#header_top {
-  positaion: absolute;
-  background: #03033d;
-  margin: 0;
-  width: 100%;
-  height: 65px;
-  display: flex;
-  justify-content: center;
-}
-
-#site_title {
-  position: absolute;
-  margin: 0 auto;
-  height: 100%;
+  color: white;
+  background: #03061A;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: white;
+  justify-content: center;
+  align-items: center;
 
-  #logo-1 {
-    font-size: 35px;
-    line-height: 1;
+  * {
+    white-space: nowrap;
   }
-
-  #logo-2 {
-    font-size: 18px;
-  }
-}
-
-#mobile_toggle {
-  margin-right: auto;
 }
 
 #header_wrapper {
+  position: relative;
+}
+
+.header-back {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  background: #0009;
+}
+
+
+.mobileBack-enter-active, .mobileBack-fade-active {
+  transition: all .3s ease-in-out;
+}
+
+.mobileBack-enter-from, .mobileBack-leave-to {
+  opacity: 0;
+}
+
+.mobileMenu-enter-active, .mobileMenu-fade-active {
+  transition: all .3s ease-in-out;
+}
+
+.mobileMenu-enter-from, .mobileMenu-leave-to {
+  transform: translateX(-80vw);
+}
+
+#mobile_menu {
+  z-index: 100;
+  transition: all 0.5s 0s ease-in-out;
+  padding: 85px 20px;
+  width: unquote("min(250px, 80vw)");
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background: #03061A;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 1em;
+  }
+
+  a.selected {
+    background: #ffffffbb;
+    color: #03061A;
+
+  }
+
+  .sns {
+    display: flex;
+    width: 100%;
+
+    a {
+      flex-basis: 30%;
+      object-fit: contain;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.header_top {
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  background: #ecb731;
+}
+
+#mobile_toggle {
+  color: white;
+  background: none;
+  border: none;
+  display: none;
+  padding: 10px;
+}
+
+#site_title {
+  text-decoration: none;
+  color: white;
+  height: 70px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo1 {
+    > div:first-of-type {
+      padding: 0;
+      height: 35px;
+      line-height: 1;
+      font-size: 35px;
+      margin-bottom: 3px;
+      @media screen and (max-width: 400px) {
+        font-size: 28px;
+        height: 28px;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      margin-top: 3px;
+      font-size: 15px;
+      @media screen and (max-width: 400px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .logo2 {
+    margin-left: 40px;
+    font-size: 50px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 40px;
+    }
+  }
+}
+.header-back {
+  display: initial;
+}
+#mobile_toggle {
+  display: inline;
+}
+#site_title .logo2 {
+  margin-left: 8px;
+}
+header {
+  padding-top: 0.3rem;
 }
 </style>
