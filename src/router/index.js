@@ -15,6 +15,7 @@ import ReservationInfo from "@/views/ReservationInfo";
 import UnderConstruction from "@/views/UnderConstruction";
 // eslint-disable-next-line no-unused-vars
 import EventsAndStage from "@/views/EventsAndStage";
+import NotFound from "@/views/NotFound"
 
 const routes = [
   {
@@ -23,8 +24,8 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/events",
-    name: "EventListView",
+    path: '/events',
+    name: 'EventListView',
     // component:UnderConstruction
     component: EventListView,
   },
@@ -81,6 +82,8 @@ const routes = [
     // component: EventsAndStage,
     component: UnderConstruction,
   },
+  {path: '/404', component: NotFound},
+  {path: '/:pathMatch(.*)*', redirect: '/404'},
 ];
 
 const router = createRouter({

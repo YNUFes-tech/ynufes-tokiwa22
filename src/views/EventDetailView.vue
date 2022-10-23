@@ -1,5 +1,5 @@
 <script setup>
-import data from "@/assets/eventData.json"
+import data from "@/assets/events.json"
 
 const props = defineProps({
   eventId: {
@@ -9,6 +9,33 @@ const props = defineProps({
 })
 
 const eventData = data.find((d) => d.event_id === props.eventId)
+
+function getPlaceName(e) {
+  let place_name = "";
+  switch (e.event_place_id) {
+    case "AB":
+    case "CD":
+    case "EF":
+      place_name = "メインストリート";
+      break;
+    case "H":
+      place_name = "大学会館周辺";
+      break;
+    case "KK":
+      place_name = "経済経営";
+      break;
+    case "T":
+      place_name = "都市";
+      break;
+    case "Y":
+      place_name = "野外音楽堂";
+      break;
+    case "Z":
+      place_name = "その他"
+  }
+  return place_name + e.event_pamphlet_id
+}
+
 </script>
 <template>
   <div class="root-wrapper">
@@ -19,13 +46,33 @@ const eventData = data.find((d) => d.event_id === props.eventId)
         <h1 class="event-title allow-wrap" v-text="this.eventData.event_title">
         </h1>
         <div class="event-place">
-          日時：全日<br>
-          場所：{{ eventData.event_place_text }}
+          <div v-if="!eventData.time28 && !eventData.time29 && !eventData.time30">
+            日時： 全日
+          </div>
+          <div class="date-table" v-if="eventData.time28 || eventData.time29 || eventData.time30">
+            <div>日時：</div>
+            <table>
+              <tr v-if="eventData.time28">
+                <td>28日</td>
+                <td v-text="eventData.time28"/>
+              </tr>
+              <tr v-if="eventData.time29">
+                <td>29日</td>
+                <td v-text="eventData.time29"/>
+              </tr>
+              <tr v-if="eventData.time30">
+                <td>30日</td>
+                <td v-text="eventData.time30"/>
+              </tr>
+            </table>
+          </div>
+          <!--          日時：全日<br>-->
+          場所：{{ getPlaceName(eventData) }}
         </div>
       </div>
       <div class="event-detail-description">
         <div class="event-icon">
-          <img :src="`/icons/`+eventData.event_id+`.webp`">
+          <img :src="`/data/icons/events/`+eventData.event_id+`.webp`">
         </div>
         <div class="event-description">
           <p class="allow-wrap" v-text="eventData.event_description"/>
@@ -59,6 +106,15 @@ const eventData = data.find((d) => d.event_id === props.eventId)
 </template>
 
 <style scoped lang="scss">
+.date-table {
+  display: flex;
+  align-items: center;
+
+  table {
+    border-spacing: 10px;
+  }
+}
+
 .allow-wrap {
   white-space: pre-wrap;
 }
