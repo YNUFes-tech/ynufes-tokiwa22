@@ -26,7 +26,7 @@ import StarTitle from "@/components/StarTitle";
           <IconRowButton icon-path="/data/icons/generals/access.webp" title="アクセス"/>
         </router-link>
         <router-link to="/reservation">
-          <IconRowButton class="reservation-icon-row" icon-path="/icons/generals/info.png"
+          <IconRowButton class="reservation-icon-row" icon-path="/data/icons/generals/info.png"
                          title="事前予約制について"/>
           <img class="reservation-image" src="@/assets/reservation-info.webp">
         </router-link>
