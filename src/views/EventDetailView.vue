@@ -209,6 +209,7 @@ p {
   width: 50vw;
   padding: 1rem;
   flex: 1;
+  aspect-ratio: 1;
 }
 
 .event-description {
