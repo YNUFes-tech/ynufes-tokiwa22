@@ -127,7 +127,7 @@ export default {
       width: fit-content;
       .back-button {
         text-decoration: none;
-        padding: 0.8em 2em;
+        padding: 0.8em 1.5em 0.8em 2.5em;
         border-radius: 2em;
         border: solid 0.1em #25254d;
         width: fit-content;
@@ -139,10 +139,10 @@ export default {
       .back-button::before {
         content: "";
         background: url("../assets/goto_top_icon.webp") no-repeat;
-        background-size: cover;
+        background-size: contain;
         position: absolute;
         top: 55%;
-        left: 10%;
+        left: 12%;
         transform: translate(0, -50%);
 
         vertical-align: middle;

@@ -7,7 +7,6 @@
       <p>
         22常盤祭では、感染症対策の観点から事前予約制を導入します。<br />チケットの無い方はご入場いただけませんのでご了承下さい。
       </p>
-      <!-- <h2><span>事前予約制への</span><span>申し込み方法</span></h2> -->
       <UnderlinedSectionTitle
         >事前予約制への申し込み方法</UnderlinedSectionTitle
       >
@@ -33,7 +32,6 @@
         <div><s> 2日目(10/29)分はこちら</s></div>
         <div><s> 3日目(10/30)分はこちら</s></div>
       </div>
-      <!-- <h2>定員について</h2> -->
       <UnderlinedSectionTitle>定員について</UnderlinedSectionTitle>
       <ul>
         <li>大学側との協議により1日当たり<b>4000人</b>となります。</li>
@@ -163,19 +161,34 @@ export default {
 
   .back-button-wrapper {
     margin: 80px auto;
-  }
-  .back-button {
-    text-decoration: none;
-    padding: 0.8em 2em;
-    border-radius: 2em;
-    border: solid 0.1em #25254d;
+    position: relative;
     width: fit-content;
-    // margin: 100px auto;
-    font-size: 1em;
-    color: #25254d;
-    font-weight: bold;
-  }
 
+    .back-button {
+      text-decoration: none;
+      padding: 0.8em 1.5em 0.8em 2.5em;
+      border-radius: 2em;
+      border: solid 0.1em #25254d;
+      width: fit-content;
+      font-size: 1em;
+      color: #25254d;
+      font-weight: bold;
+    }
+    .back-button::before {
+      content: "";
+      background: url("../assets/goto_top_icon.webp") no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 55%;
+      left: 12%;
+      transform: translate(0, -50%);
+
+      vertical-align: middle;
+      padding-right: 5px;
+      width: 16px;
+      height: 16px;
+    }
+  }
   .event-application-buttons {
     display: flex;
     flex-direction: column;
