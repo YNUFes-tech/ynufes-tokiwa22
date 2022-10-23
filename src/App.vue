@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <HeaderView class="fadeUp" id="header"/>
+  <HeaderView id="header"/>
   <router-view class="router-view"/>
   <Background id="bg"/>
   <!--  <FooterComponent/>-->
