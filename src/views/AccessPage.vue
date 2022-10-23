@@ -6,10 +6,10 @@
       <p>
         横浜駅バス乗り場より、20〜30分で大学最寄のバス停(徒歩5分圏内)に到着いたします。
       </p>
-      <div class="back-button-wrapper">
+      <div class="accesslink-button-wrapper">
         <a
           href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
-          class="back-button"
+          class="accesslink-button"
           >詳細はこちら</a
         >
       </div>
@@ -26,12 +26,15 @@
           相鉄・JR直通線「羽沢横浜国大駅」より北門・西門まで徒歩15分<br />高低差：中
         </li>
       </ul>
-      <div class="back-button-wrapper">
+      <div class="accesslink-button-wrapper">
         <a
           href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
-          class="back-button"
+          class="accesslink-button"
           >詳細はこちら</a
         >
+      </div>
+      <div class="back-button-wrapper">
+        <router-link class="back-button" to="/">トップに戻る</router-link>
       </div>
     </div>
   </div>
@@ -105,18 +108,48 @@ export default {
         margin: 0.5em auto;
       }
     }
-    .back-button-wrapper {
+    .accesslink-button-wrapper {
       margin: 40px auto 60px;
+      .accesslink-button {
+        text-decoration: none;
+        padding: 0.8em 2em;
+        border-radius: 2em;
+        border: solid 0.1em #25254d;
+        width: fit-content;
+        font-size: 1em;
+        color: #25254d;
+        font-weight: bold;
+      }
     }
-    .back-button {
-      text-decoration: none;
-      padding: 0.8em 2em;
-      border-radius: 2em;
-      border: solid 0.1em #25254d;
+    .back-button-wrapper {
+      margin: 200px auto 60px;
+      position: relative;
       width: fit-content;
-      font-size: 1em;
-      color: #25254d;
-      font-weight: bold;
+      .back-button {
+        text-decoration: none;
+        padding: 0.8em 2em;
+        border-radius: 2em;
+        border: solid 0.1em #25254d;
+        width: fit-content;
+        font-size: 1em;
+        color: #25254d;
+        font-weight: bold;
+        margin-top: 32px;
+      }
+      .back-button::before {
+        content: "";
+        background: url("../assets/goto_top_icon.webp") no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        transform: translate(0, -50%);
+
+        vertical-align: middle;
+        padding-right: 5px;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 }
