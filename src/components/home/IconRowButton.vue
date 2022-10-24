@@ -21,10 +21,10 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .home-button {
-  width: 15em;
+  width: 17em;
   display: flex;
   align-items: center;
-  background: #909090;
+  background: #0b0b56;
   border-radius: 10px;
   height: 40px;
   padding: 0.3em;
@@ -37,7 +37,6 @@ const props = defineProps({
   .icon {
     height: 30px;
     object-fit: cover;
-    padding-right: 0.3em;
   }
 }
 
