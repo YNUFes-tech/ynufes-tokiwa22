@@ -341,12 +341,12 @@ export default {
       padding: 1em;
 
       li {
-        text-align: left;
         width: 100%;
         flex-grow: 1;
       }
 
       @media screen and (min-width: 540px) {
+        text-align: left;
         padding-left: 1em;
         li {
           width: calc(50% - 1em);
