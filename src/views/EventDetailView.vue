@@ -42,9 +42,9 @@ function getPlaceName(e) {
   <div class="root-wrapper">
     <div class="event-detail fade-up">
       <div class="event-detail-title">
-        <div class="org-name" v-text="this.eventData.org_name">
+        <div class="org-name" v-text="eventData.org_name">
         </div>
-        <h1 class="event-title allow-wrap" v-text="this.eventData.event_title">
+        <h1 class="event-title allow-wrap" v-text="eventData.event_title">
         </h1>
         <div class="event-place">
           <div v-if="!eventData.time28 && !eventData.time29 && !eventData.time30">
