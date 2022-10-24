@@ -1,7 +1,14 @@
 <template>
   <div class="content fade-up" @click="null">
-    <h1>アクセス</h1>
+    <div class="title">
+      <StarTitle title="アクセス"/>
+    </div>
     <div class="page-content">
+      <iframe
+          class="access-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.307113456039!2d139.58968321581605!3d35.47194454902769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2sYokohama%20National%20University!5e0!3m2!1sen!2sjp!4v1666620182419!5m2!1sen!2sjp"
+          style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"/>
       <UnderlinedSectionTitle>バスでのアクセス</UnderlinedSectionTitle>
       <p>
         横浜駅バス乗り場より、20〜30分で大学最寄のバス停(徒歩5分圏内)に到着いたします。
@@ -39,10 +46,11 @@
 
 <script>
 import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
+import StarTitle from "@/components/StarTitle";
 
 export default {
   name: "ReservationInfo",
-  components: {UnderlinedSectionTitle},
+  components: {StarTitle, UnderlinedSectionTitle},
 };
 </script>
 
@@ -59,19 +67,14 @@ export default {
     display: inline;
   }
 
-  h1 {
+  .title {
     padding: 1em 0;
     margin: 0;
     width: 100%;
-    font-size: 2em;
     background: #25254d;
     color: white;
-
-    b {
-      color: white;
-      font-size: 1.5em;
-      margin: 0 0.1em;
-      text-decoration: none;
+    .star-title{
+      margin: 0 auto;
     }
   }
 
@@ -83,6 +86,12 @@ export default {
     background-position: center;
     font-size: 1em;
     font-weight: bold;
+
+    .access-map {
+      border-radius: 2em;
+      aspect-ratio: 1.4;
+      width: calc(100% - 2em);
+    }
 
     h2 {
       font-weight: bolder;
