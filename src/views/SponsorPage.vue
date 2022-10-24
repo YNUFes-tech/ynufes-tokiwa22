@@ -5,7 +5,7 @@
     </div>
     <div class="page-content">
       <div class="top-description">
-        「22清陵祭」を開催するにあたり、多くの企業の皆様より多大なご協力を賜りました。この場をお借りいたしまして、心より感謝申し上げます。ご協賛いただきました企業を以下に掲載させていただきます。
+        「22常盤祭」を開催するにあたり、多くの企業の皆様より多大なご協力を賜りました。この場をお借りいたしまして、心より感謝申し上げます。ご協賛いただきました企業を以下に掲載させていただきます。
       </div>
       <UnderlinedSectionTitle>広告協賛</UnderlinedSectionTitle>
       <ul class="sponsors-list">
