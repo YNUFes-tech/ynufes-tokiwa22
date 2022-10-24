@@ -1,5 +1,6 @@
 <script setup>
 import data from "@/assets/events.json"
+import StarTitle from "@/components/StarTitle";
 
 const props = defineProps({
   eventId: {
@@ -66,7 +67,6 @@ function getPlaceName(e) {
               </tr>
             </table>
           </div>
-          <!--          日時：全日<br>-->
           場所：{{ getPlaceName(eventData) }}
         </div>
       </div>
@@ -79,7 +79,7 @@ function getPlaceName(e) {
         </div>
       </div>
       <div class="org-detail-description">
-        <h2>団体説明</h2>
+        <StarTitle title="団体紹介"/>
         <h3>{{ eventData.org_name }}</h3>
         <p class="allow-wrap" v-text="eventData.org_description">
         </p>
@@ -239,7 +239,13 @@ p {
 
 }
 
-
-
+.org-detail-description{
+  h3{
+    font-size: 2em;
+  }
+  .star-title{
+    margin: 0 auto;
+  }
+}
 
 </style>
