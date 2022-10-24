@@ -1,36 +1,33 @@
 <template>
   <div class="content fade-up" @click="null">
     <h1>アクセス</h1>
-    <div class="modal-content">
+    <div class="page-content">
       <UnderlinedSectionTitle>バスでのアクセス</UnderlinedSectionTitle>
       <p>
         横浜駅バス乗り場より、20〜30分で大学最寄のバス停(徒歩5分圏内)に到着いたします。
       </p>
       <div class="accesslink-button-wrapper">
-        <a
-          href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
-          class="accesslink-button"
-          >詳細はこちら</a
-        >
+        <a href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
+           class="accesslink-button">詳細はこちら</a>
       </div>
 
       <UnderlinedSectionTitle>電車でのアクセス</UnderlinedSectionTitle>
       <ul class="nearest-stations">
         <li>
-          横浜市営地下鉄ブルーライン「三ツ沢上町駅」より正門まで徒歩16分<br />高低差：低
+          横浜市営地下鉄ブルーライン「三ツ沢上町駅」より正門まで徒歩16分<br/>高低差：低
         </li>
         <li>
-          相鉄線「和田町駅」より南門・南通用門まで徒歩20分<br />高低差：高
+          相鉄線「和田町駅」より南門・南通用門まで徒歩20分<br/>高低差：高
         </li>
         <li>
-          相鉄・JR直通線「羽沢横浜国大駅」より北門・西門まで徒歩15分<br />高低差：中
+          相鉄・JR直通線「羽沢横浜国大駅」より北門・西門まで徒歩15分<br/>高低差：中
         </li>
       </ul>
       <div class="accesslink-button-wrapper">
         <a
-          href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
-          class="accesslink-button"
-          >詳細はこちら</a
+            href="https://www.ynu.ac.jp/campus/guide/handbook/pdf/ori_04.pdf"
+            class="accesslink-button"
+        >詳細はこちら</a
         >
       </div>
       <div class="back-button-wrapper">
@@ -42,18 +39,14 @@
 
 <script>
 import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
+
 export default {
   name: "ReservationInfo",
-  components: { UnderlinedSectionTitle },
+  components: {UnderlinedSectionTitle},
 };
 </script>
 
 <style scoped lang="scss">
-.modal {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
 .content {
   box-sizing: border-box;
   width: min(90%, 50rem);
@@ -82,7 +75,7 @@ export default {
     }
   }
 
-  .modal-content {
+  .page-content {
     margin: 1em;
     background-image: url("@/assets/logo-seisai-trans08.webp");
     background-size: contain;
@@ -108,8 +101,10 @@ export default {
         margin: 0.5em auto;
       }
     }
+
     .accesslink-button-wrapper {
       margin: 40px auto 60px;
+
       .accesslink-button {
         text-decoration: none;
         padding: 0.8em 2em;
@@ -121,10 +116,12 @@ export default {
         font-weight: bold;
       }
     }
+
     .back-button-wrapper {
       margin: 200px auto 60px;
       position: relative;
       width: fit-content;
+
       .back-button {
         text-decoration: none;
         padding: 0.8em 1.5em 0.8em 2.5em;
@@ -136,6 +133,7 @@ export default {
         font-weight: bold;
         margin-top: 32px;
       }
+
       .back-button::before {
         content: "";
         background: url("../assets/goto_top_icon.webp") no-repeat;
