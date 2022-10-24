@@ -4,22 +4,38 @@ import EventWidget from "@/components/EventWidget";
 import data from "@/assets/events.json";
 import OptionCheckBox from "@/components/OptionCheckBox";
 import {computed, ref} from "vue";
+import {useRoute} from "vue-router";
 
-const showCheckbox = ref(false)
-const closeCheckbox = ref(false)
+const showCheckbox = ref(false);
+const closeCheckbox = ref(false);
+
+let default_selection
+const genre = useRoute().query.genre;
+if (Number(genre)) {
+  default_selection = [false, false, false, false, false, false, false, false];
+  default_selection[Number(genre)] = true;
+} else {
+  default_selection = [true, true, true, true, true, true, true, true];
+}
 
 const toggleCheckbox = () => {
-  showCheckbox.value = !showCheckbox.value
-  closeCheckbox.value = !showCheckbox.value
-}
-const optionCheckBox = ref(null)
+  showCheckbox.value = !showCheckbox.value;
+  closeCheckbox.value = !showCheckbox.value;
+};
+const loc = useRoute().query.loc;
+const optionCheckBox = ref(null);
 const events = computed(() => {
   if (!optionCheckBox.value) return [];
+  if (loc)
+    return data.filter((d) => {
+          return optionCheckBox.value.selection[d.event_genre_id - 1] && d.event_place_id === loc
+        }
+    )
   return data.filter((d) => {
         return optionCheckBox.value.selection[d.event_genre_id - 1]
       }
   )
-})
+});
 </script>
 <template>
   <div class="root-wrapper fade-up">
@@ -29,7 +45,7 @@ const events = computed(() => {
         <div style="padding: 1.2em" @click="toggleCheckbox">カテゴリー</div>
       </div>
       <div class="checkbox-frame" :class="{'checkbox-frame-show': showCheckbox, 'checkbox-frame-close': closeCheckbox}">
-        <OptionCheckBox ref="optionCheckBox"/>
+        <OptionCheckBox ref="optionCheckBox" :selection="default_selection"/>
       </div>
     </div>
     <div class="events_block">
@@ -68,7 +84,7 @@ const events = computed(() => {
 }
 
 .checkbox-frame-show {
-  animation:.3s linear forwards slide-checkbox;
+  animation: .3s linear forwards slide-checkbox;
 }
 
 .checkbox-frame-close {
