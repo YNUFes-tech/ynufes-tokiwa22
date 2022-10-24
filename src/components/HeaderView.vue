@@ -23,11 +23,12 @@ watch(route, () => {
   <div id="header_wrapper">
     <header>
       <div class="header_top">
-        <button id="mobile_toggle" @click="toggleMenu">
+        <button id="menu_toggle" @click="toggleMenu">
           <svg aria-hidden="true" height="30" viewBox="0 0 30 30" width="30" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10"
+            <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-linecap="round" stroke-miterlimit="10"
                   stroke-width="2"></path>
           </svg>
+          <div>Menu</div>
         </button>
         <router-link id="site_title" to="/" @click="closeMenu">
           <div class="logo1">
@@ -42,10 +43,11 @@ watch(route, () => {
       <div v-show="mToggled" id="mobile_menu">
         <router-link active-class="selected" to="/" @click="closeMenu">ホーム</router-link>
         <router-link to="/events" active-class="selected" @click="closeMenu">企画を見る</router-link>
+        <router-link active-class="selected" to="/reservation" @click="closeMenu">事前予約制について</router-link>
+        <router-link active-class="selected" to="/access" @click="closeMenu">アクセス</router-link>
         <router-link active-class="selected" to="/pamphlet" @click="closeMenu">パンフレット</router-link>
         <router-link active-class="selected" to="/sponsors" @click="closeMenu">ご協賛について</router-link>
         <router-link active-class="selected" to="/others" @click="closeMenu">他大学祭の紹介</router-link>
-        <router-link active-class="selected" to="/reservation" @click="closeMenu">事前予約制について</router-link>
         <div class="sns">
           <a href="https://twitter.com/ynu_fes" target="_blank"><img alt="twitter"
                                                                      class="hover-to-shrink"
@@ -168,12 +170,28 @@ header {
   width: 100%;
 }
 
-#mobile_toggle {
+#menu_toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
   background: none;
   border: none;
-  display: none;
   padding: 10px;
+
+  > svg {
+    height: 40px;
+    aspect-ratio: 1;
+  }
+
+  @media screen and (min-width: 400px) {
+    flex-direction: row;
+    font-size: 1.5em;
+    > div {
+      padding-left: 0.5em;
+    }
+  }
 }
 
 #site_title {
@@ -224,15 +242,15 @@ header {
     }
   }
 }
+
 .header-back {
   display: initial;
 }
-#mobile_toggle {
-  display: inline;
-}
+
 #site_title .logo2 {
   margin-left: 8px;
 }
+
 header {
   padding-top: 0.3rem;
 }
