@@ -3,7 +3,7 @@
     <h1>
       <span>22常盤祭は</span><span><b>事前予約制</b><span>です!!</span></span>
     </h1>
-    <div class="modal-content">
+    <div class="page-content">
       <p>
         22常盤祭では、感染症対策の観点から事前予約制を導入します。<br />チケットの無い方はご入場いただけませんのでご了承下さい。
       </p>
@@ -79,11 +79,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.modal {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
 .content {
   box-sizing: border-box;
   width: min(90%, 50rem);
@@ -113,7 +108,7 @@ export default {
     }
   }
 
-  .modal-content {
+  .page-content {
     margin: 1em;
     background-image: url("@/assets/logo-seisai-trans08.webp");
     background-size: contain;
@@ -121,22 +116,6 @@ export default {
     background-position: center;
     font-size: 1em;
     font-weight: bold;
-
-    h2 {
-      font-weight: bolder;
-      font-size: 1.8em;
-      width: fit-content;
-      margin: 1em auto 1.2em;
-    }
-
-    h2:after {
-      content: "";
-      float: left;
-      background: #b49b29;
-      width: 100%;
-      height: 6px;
-      border-radius: 3px;
-    }
 
     ul {
       text-align: start;
