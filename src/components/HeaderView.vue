@@ -28,7 +28,7 @@ watch(route, () => {
             <path d="M4 7h22M4 15h22M4 23h22" stroke="white" stroke-linecap="round" stroke-miterlimit="10"
                   stroke-width="2"></path>
           </svg>
-          <div>Menu</div>
+          <span>Menu</span>
         </button>
         <router-link id="site_title" to="/" @click="closeMenu">
           <div class="logo1">
@@ -179,6 +179,7 @@ header {
   background: none;
   border: none;
   padding: 10px;
+  cursor: pointer;
 
   > svg {
     height: 40px;
