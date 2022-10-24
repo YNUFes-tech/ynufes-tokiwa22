@@ -12,8 +12,12 @@ const closeCheckbox = ref(false);
 let default_selection
 const genre = useRoute().query.genre;
 if (Number(genre)) {
-  default_selection = [false, false, false, false, false, false, false, false];
-  default_selection[Number(genre)] = true;
+  if (Number(genre) === 10) {
+    default_selection = [false, false, false, false, true, true, true, true];
+  } else {
+    default_selection = [false, false, false, false, false, false, false, false];
+    default_selection[Number(genre) - 1] = true;
+  }
 } else {
   default_selection = [true, true, true, true, true, true, true, true];
 }
