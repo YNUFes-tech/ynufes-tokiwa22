@@ -9,7 +9,7 @@
       </div>
       <div class="selection-button-row">
         <div @click="close">戻る</div>
-        <a class="download-button">ダウンロード(122.23MB)</a>
+        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-original.pdf" target="_blank">ダウンロード(122.23MB)</a>
       </div>
     </div>
   </teleport>

@@ -17,12 +17,12 @@ const showDialog = ref(false)
         <span>22常盤祭のパンフレットは</span><span>こちらからダウンロードして</span><span>ご覧いただけます。</span>
       </div>
       <div class="download-buttons">
-        <div class="download-button">
+        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-light.pdf" target="_blank">
           パンフレット<br>軽量版<br>(20.7MB)<br>
-        </div>
-        <a class="download-button" @click="showDialog=true">
-          パンフレット<br>オリジナル版<br>(127MB)<br>
         </a>
+        <div class="download-button" @click="showDialog=true">
+          パンフレット<br>オリジナル版<br>(127MB)<br>
+        </div>
       </div>
     </div>
     <div class="back-button-wrapper">
@@ -117,6 +117,7 @@ const showDialog = ref(false)
     flex-wrap: wrap;
 
     .download-button {
+      text-decoration: none;
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -124,6 +125,7 @@ const showDialog = ref(false)
       font-size: 1.3em;
       flex-grow: 1;
       padding: 1em;
+      color: #171749;
       border: #171749 1px solid;
       border-radius: 2em;
       margin: 1em;
