@@ -18,7 +18,7 @@ const eventGenre = {
 const genreIcons = {
   1: "exhibition.png",
   2: "performance.png",
-  3: "dessert.png",
+  3: "sports.png",
   4: "dessert.png",
   5: "noodle.png",
   6: "fast_food.png",
