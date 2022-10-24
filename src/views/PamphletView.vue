@@ -18,7 +18,7 @@ const showDialog = ref(false)
       </div>
       <div class="download-buttons">
         <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-light.pdf" target="_blank">
-          パンフレット<br>軽量版<br>(20.7MB)<br>
+          パンフレット<br>軽量版<br>(21MB)<br>
         </a>
         <div class="download-button" @click="showDialog=true">
           パンフレット<br>オリジナル版<br>(127MB)<br>

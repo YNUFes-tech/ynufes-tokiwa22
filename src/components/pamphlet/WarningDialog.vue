@@ -9,7 +9,7 @@
       </div>
       <div class="selection-button-row">
         <div @click="close">戻る</div>
-        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-original.pdf" target="_blank">ダウンロード(122.23MB)</a>
+        <a class="download-button" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22%E5%B8%B8%E7%9B%A4%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank">ダウンロード(122.23MB)</a>
       </div>
     </div>
   </teleport>
