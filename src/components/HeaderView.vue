@@ -44,6 +44,7 @@ watch(route, () => {
         <router-link active-class="selected" to="/reservation" @click="closeMenu">事前予約制について</router-link>
         <router-link active-class="selected" to="/access" @click="closeMenu">アクセス</router-link>
         <router-link active-class="selected" to="/pamphlet" @click="closeMenu">パンフレット</router-link>
+        <router-link active-class="selected" to="/poster" @click="closeMenu">ポスター展覧会</router-link>
         <router-link active-class="selected" to="/sponsors" @click="closeMenu">ご協賛について</router-link>
         <router-link active-class="selected" to="/others" @click="closeMenu">他大学祭の紹介</router-link>
         <div class="sns">
@@ -163,6 +164,8 @@ header {
 }
 
 .header_top {
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -173,19 +176,21 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  //border: 1px white solid;
   color: white;
   background: none;
   border: none;
   padding: 10px;
   cursor: pointer;
   font-size: 12px;
+  margin-right: auto;
 
   > svg {
     height: 40px;
     aspect-ratio: 1;
   }
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 550px) {
     flex-direction: row;
     font-size: 25px;
     > span {
@@ -195,6 +200,7 @@ header {
 }
 
 #site_title {
+  position: absolute;
   text-decoration: none;
   color: white;
   height: 70px;
