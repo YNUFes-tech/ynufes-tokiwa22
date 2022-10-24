@@ -1,20 +1,20 @@
 <script setup></script>
 
 <template>
-  <h2>
-    <slot />
+  <h2 class="underlined-section-title">
+    <slot/>
   </h2>
 </template>
 
 <style scoped>
-h2 {
+.underlined-section-title {
   font-weight: bolder;
-  font-size: 1.2rem;
+  font-size: 1.8em;
   width: fit-content;
-  /* margin: 0.5em auto 1.5em; */
+  margin: 0.5em auto 1em;
 }
 
-h2:after {
+.underlined-section-title:after {
   content: "";
   float: left;
   background: #b49b29;
