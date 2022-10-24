@@ -1,5 +1,5 @@
 <template>
-<div class="root-wrapper">
+<div class="root-wrapper fade-up">
   <h1>22常盤祭ポスター展覧会</h1>
   <p>22常盤祭開催にあたり計4点のポスター案の応募をいただきました。<br>選考の結果、今回のポスターは以下の作品に決定しました。</p>
   <div class="selected">
@@ -40,14 +40,13 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  padding-top: 2em;
+}
 
 p{
   line-height: 3rem;
   letter-spacing: 2px;
-}
-
-.root-wrapper{
-  color: white;
 }
 
 .selected{
