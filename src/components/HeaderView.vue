@@ -1,7 +1,5 @@
 <script setup>
-// eslint-disable-next-line no-unused-vars
 import {ref, watch} from "vue";
-// eslint-disable-next-line no-unused-vars
 import {useRoute} from "vue-router";
 
 let mToggled = ref(false);
@@ -142,7 +140,7 @@ header {
   }
 
   a.selected {
-    background: #ffffffbb;
+    background: #fffe;
     color: #03061A;
 
   }
@@ -180,6 +178,7 @@ header {
   border: none;
   padding: 10px;
   cursor: pointer;
+  font-size: 12px;
 
   > svg {
     height: 40px;
@@ -188,9 +187,9 @@ header {
 
   @media screen and (min-width: 400px) {
     flex-direction: row;
-    font-size: 1.5em;
-    > div {
-      padding-left: 0.5em;
+    font-size: 25px;
+    > span {
+      padding-left: 12px;
     }
   }
 }
