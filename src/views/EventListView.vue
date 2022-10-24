@@ -41,8 +41,7 @@ const events = computed(() => {
   <div class="root-wrapper fade-up">
     <div class="filter-box">
       <div class="search-button-row">
-        <div style="padding: 1.2em" @click="toggleCheckbox">企画場所</div>
-        <div style="padding: 1.2em" @click="toggleCheckbox">カテゴリー</div>
+        <div style="padding: 1.2em" @click="toggleCheckbox">カテゴリーを絞る</div>
       </div>
       <div class="checkbox-frame" :class="{'checkbox-frame-show': showCheckbox, 'checkbox-frame-close': closeCheckbox}">
         <OptionCheckBox ref="optionCheckBox" :selection="default_selection"/>
