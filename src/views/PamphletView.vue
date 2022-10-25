@@ -17,7 +17,7 @@ const showDialog = ref(false)
         <span>22常盤祭のパンフレットは</span><span>こちらからダウンロードして</span><span>ご覧いただけます。</span>
       </div>
       <div class="download-buttons">
-        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-light.pdf" target="_blank">
+        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-light.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank">
           パンフレット<br>軽量版<br>(21MB)<br>
         </a>
         <div class="download-button" @click="showDialog=true">
