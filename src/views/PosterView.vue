@@ -1,14 +1,14 @@
 <template>
 <div class="root-wrapper fade-up">
   <h1>22常盤祭ポスター展覧会</h1>
-  <p>22常盤祭開催にあたり計4点のポスター案の応募をいただきました。<br>選考の結果、今回のポスターは以下の作品に決定しました。</p>
+  <p>22常盤祭開催にあたり計4点のポスター案の応募を頂きました。<br>選考の結果、今回のポスターは以下の作品に決定しました。</p>
   <div class="selected">
     <img src="@/assets/poster.webp">
     <p>経営学部経営学科2年<br><span>よる</span>さんの作品</p>
   </div>
   <div class="others">
     <h2>その他の作品</h2>
-    <p>他3点の作品全てご紹介させていただきます。<br>ご応募ありがとうございました。</p>
+    <p>他3点の作品全てご紹介させて頂きます。<br>ご応募ありがとうございました。</p>
     <div class="other-images">
       <div class="option">
         <img src="@/assets/poster1.webp">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="option">
-        <img src="@/assets/poster.webp">
+        <img src="@/assets/poster2.webp">
         <div class="mask">
           <p class="caption">教育学部学校教育課程4年<br><span>サイ</span>さんの作品</p>
         </div>
