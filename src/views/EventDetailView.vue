@@ -47,23 +47,23 @@ function getPlaceName(e) {
         <h1 class="event-title allow-wrap" v-text="eventData.event_title">
         </h1>
         <div class="event-place">
-          <div v-if="!eventData.time28 && !eventData.time29 && !eventData.time30">
+          <div v-if="!eventData.t28 && !eventData.t29 && !eventData.t30">
             日時： 全日
           </div>
-          <div class="date-table" v-if="eventData.time28 || eventData.time29 || eventData.time30">
+          <div class="date-table" v-if="eventData.t28 || eventData.t29 || eventData.t30">
             <div>日時：</div>
             <table>
-              <tr v-if="eventData.time28">
+              <tr v-if="eventData.t28">
                 <td>28日</td>
-                <td v-text="eventData.time28"/>
+                <td v-text="eventData.t28"/>
               </tr>
-              <tr v-if="eventData.time29">
+              <tr v-if="eventData.t29">
                 <td>29日</td>
-                <td v-text="eventData.time29"/>
+                <td v-text="eventData.t29"/>
               </tr>
-              <tr v-if="eventData.time30">
+              <tr v-if="eventData.t30">
                 <td>30日</td>
-                <td v-text="eventData.time30"/>
+                <td v-text="eventData.t30"/>
               </tr>
             </table>
           </div>
