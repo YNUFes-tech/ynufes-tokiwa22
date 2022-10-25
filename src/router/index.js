@@ -4,6 +4,7 @@ import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import KaraokeView from "@/views/KaraokeView";
 import EventsByLocation from "@/views/EventsByLocation";
+import ContestViwe from "@/views/ContestViwe";
 
 const routes = [
   {
@@ -33,6 +34,11 @@ const routes = [
     path:'/sp/karaoke',
     name: '',
     component: KaraokeView
+  },
+  {
+    path:'/sp/contest',
+    name: '',
+    component: ContestViwe
   }
 ]
 
