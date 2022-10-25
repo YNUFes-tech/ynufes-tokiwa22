@@ -6,7 +6,7 @@
     <div class="page-content">
       <iframe
           class="access-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.307113456039!2d139.58968321581605!3d35.47194454902769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2sYokohama%20National%20University!5e0!3m2!1sen!2sjp!4v1666620182419!5m2!1sen!2sjp"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.307289997533!2d139.58968321525322!3d35.47194018024357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601859679ea21c77%3A0x28d72ba15dae9e6c!2z5qiq5rWc5Zu956uL5aSn5a2m!5e0!3m2!1sja!2sjp!4v1666685538416!5m2!1sja!2sjp"
           style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"/>
       <UnderlinedSectionTitle>バスでのアクセス</UnderlinedSectionTitle>
