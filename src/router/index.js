@@ -1,9 +1,7 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import EventDetailView from "../views/EventDetailView";
-import EventListView from "../views/EventListView";
-// eslint-disable-next-line no-unused-vars
-import EventsByLocation from "@/views/EventsByLocation";
+import {createRouter, createWebHistory} from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import EventDetailView from '../views/EventDetailView'
+import EventListView from '../views/EventListView'
 import UnderConstruction from "@/views/UnderConstruction";
 // eslint-disable-next-line no-unused-vars
 import EventsAndStage from "@/views/EventsAndStage";
@@ -38,6 +36,11 @@ const routes = [
     path: "/sp/karaoke",
     name: "",
     component: () => import(/* webpackChunkName: "group-user" */ '@/views/KaraokeView.vue'),
+  },
+  {
+    path:'/sp/contest',
+    name: '',
+    component: () => import(/* webpackChunkName: "group-user" */ '@/views/ContestView.vue')
   },
   {
     path: "/poster",
