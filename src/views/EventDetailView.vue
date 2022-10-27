@@ -72,6 +72,7 @@ function getPlaceName(e) {
           </div>
           場所：{{ getPlaceName(eventData) }}
         </div>
+        <router-link to="/map" class="map-button">マップを見る</router-link>
       </div>
       <div class="event-detail-description">
         <div class="event-icon">
@@ -116,6 +117,17 @@ function getPlaceName(e) {
   table {
     border-spacing: 10px;
   }
+}
+
+.map-button {
+  font-size: 1.3rem;
+  width: fit-content;
+  border-radius: 1em;
+  color: white;
+  padding: 0.3em;
+  margin: .3em 0 0 4em;
+  border: solid white 1px;
+  text-decoration: none;
 }
 
 .allow-wrap {
@@ -242,11 +254,12 @@ p {
 
 }
 
-.org-detail-description{
-  h3{
+.org-detail-description {
+  h3 {
     font-size: 2em;
   }
-  .star-title{
+
+  .star-title {
     margin: 0 auto;
   }
 }
