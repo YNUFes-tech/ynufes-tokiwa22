@@ -13,11 +13,19 @@ import StarTitle from "@/components/StarTitle";
     <SponsorBlock class="sponsor-block"/>
     <div class="home-row-1">
       <div class="menu-buttons">
+        <router-link to="/reservation">
+          <IconRowButton class="reservation-icon-row" icon-path="/data/icons/generals/info.png"
+                         title="事前予約制について"/>
+          <img class="reservation-image" src="@/assets/reservation-info.webp">
+        </router-link>
         <router-link :to="{name:'EventListView'}">
           <IconRowButton icon-path="/data/icons/generals/list.webp" title="企画一覧"/>
         </router-link>
         <router-link to="/time-table">
           <IconRowButton icon-path="/data/icons/generals/schedule.webp" title="ステージタイムテーブル"/>
+        </router-link>
+        <router-link to="/pamphlet">
+          <IconRowButton icon-path="/data/icons/generals/book.webp" title="パンフレット"/>
         </router-link>
         <router-link to="/map">
           <IconRowButton icon-path="/data/icons/generals/map.webp" title="マップをみる"/>
@@ -25,22 +33,9 @@ import StarTitle from "@/components/StarTitle";
         <router-link to="/access">
           <IconRowButton icon-path="/data/icons/generals/access.webp" title="アクセス"/>
         </router-link>
-        <router-link to="/reservation">
-          <IconRowButton class="reservation-icon-row" icon-path="/data/icons/generals/info.png"
-                         title="事前予約制について"/>
-          <img class="reservation-image" src="@/assets/reservation-info.webp">
-        </router-link>
       </div>
       <HomeSearchSection/>
     </div>
-<!--        <div class="home-row-2">-->
-<!--          <StarTitle class="star-title" title="コンテンツ"/>-->
-<!--        </div>-->
-    <!--    <div class="home-row-3">-->
-    <!--      <StarTitle class="star-title" title="お役立ち情報"/>-->
-    <!--    </div>-->
-    <!--    <div class="event-search-area">-->
-    <!--    </div>-->
   </div>
 </template>
 <style scoped lang="scss">
