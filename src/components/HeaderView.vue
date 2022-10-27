@@ -72,7 +72,7 @@ watch(route, () => {
 }
 
 header {
-  padding-top: 1rem;
+  padding: 0.5rem 0;
   z-index: 100;
   width: 100%;
   position: fixed;
@@ -255,9 +255,5 @@ header {
 
 #site_title .logo2 {
   margin-left: 8px;
-}
-
-header {
-  padding-top: 0.3rem;
 }
 </style>

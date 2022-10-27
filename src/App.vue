@@ -71,7 +71,7 @@ nav a.router-link-exact-active {
 
 
 .router-view {
-  margin: 80px auto 0 auto;
+  margin: 90px auto 0 auto;
   top: 0;
   z-index: 50;
 }
