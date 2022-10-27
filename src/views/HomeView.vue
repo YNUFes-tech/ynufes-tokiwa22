@@ -6,6 +6,7 @@ import IconRowButton from "@/components/home/IconRowButton";
 import SponsorBlock from "@/components/sponsor/SponsorBlock";
 // eslint-disable-next-line no-unused-vars
 import StarTitle from "@/components/StarTitle";
+import SecondRowSwiper from "@/components/home/SecondRowSwiper";
 </script>
 <template>
   <div class="home-wrapper">
@@ -35,6 +36,10 @@ import StarTitle from "@/components/StarTitle";
         </router-link>
       </div>
       <HomeSearchSection/>
+    </div>
+    <div class="home-row-2">
+      <StarTitle title="コンテンツ"/>
+      <SecondRowSwiper/>
     </div>
   </div>
 </template>
@@ -75,9 +80,10 @@ import StarTitle from "@/components/StarTitle";
 .home-row-2 {
   display: flex;
   flex-direction: column;
+  margin: 1em 0;
 
   .star-title {
-    margin: auto;
+    margin: 1em auto .5em auto;
   }
 }
 
