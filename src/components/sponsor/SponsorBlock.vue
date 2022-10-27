@@ -6,7 +6,6 @@ import {event} from "vue-gtag";
 import 'swiper/css';
 import 'swiper/css/autoplay'
 
-// import Swiper core and required modules
 import SwiperCore, {Autoplay} from 'swiper';
 import store from "@/store";
 SwiperCore.use([Autoplay]);
@@ -18,9 +17,7 @@ const randomList = function (rand) {
 
 const access = async function (id) {
   if (process.env.NODE_ENV === "production") {
-    event("sponsor:click", {
-      sponsor_id: id,
-    });
+    event("sponsor:click:" + id);
   }
 }
 </script>
@@ -55,8 +52,8 @@ const access = async function (id) {
     <swiper-slide v-for="ad in randomList(store.state.sponsors)" :key="ad.id">
       <a :href="`${ad.url?ad.url:''}`" rel="noopener noreferrer"
          target="_blank"
-         v-on:click="access(`${ad.sponsors}`)">
-        <img :src="`${ad.image.url}`" alt=""/>
+         v-on:click="access(`${ad.sponsor_id}`)">
+        <img :src="`${ad.image.url}`" :alt="ad.alt"/>
       </a>
     </swiper-slide>
   </swiper>
