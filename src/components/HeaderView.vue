@@ -44,7 +44,6 @@ watch(route, () => {
         <router-link active-class="selected" to="/reservation" @click="closeMenu">事前予約制について</router-link>
         <router-link active-class="selected" to="/access" @click="closeMenu">アクセス</router-link>
         <router-link active-class="selected" to="/pamphlet" @click="closeMenu">パンフレット</router-link>
-        <router-link active-class="selected" to="/poster" @click="closeMenu">ポスター展覧会</router-link>
         <router-link active-class="selected" to="/sponsors" @click="closeMenu">ご協賛について</router-link>
         <router-link active-class="selected" to="/others" @click="closeMenu">他大学祭の紹介</router-link>
         <div class="sns">
