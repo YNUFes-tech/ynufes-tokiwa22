@@ -34,6 +34,9 @@ function getPlaceName(e) {
     case "EF":
       place_name = "メインストリート";
       break;
+    case "ED":
+      place_name = "教育";
+      break;
     case "H":
       place_name = "大学会館周辺";
       break;
@@ -47,7 +50,7 @@ function getPlaceName(e) {
       place_name = "野外音楽堂";
       break;
     case "Z":
-      place_name="その他"
+      place_name = "その他"
   }
   return place_name + e.event_pamphlet_id
 }
