@@ -18,10 +18,10 @@ const showDialog = ref(false)
       </div>
       <div class="download-buttons">
         <a class="download-button" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-low.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank">
-          パンフレット<br>軽量版<br>(20.5MB)<br>
+          パンフレット<br>軽量版<br>(20.8MB)<br>
         </a>
         <div class="download-button" @click="showDialog=true">
-          パンフレット<br>オリジナル版<br>(35.9MB)<br>
+          パンフレット<br>オリジナル版<br>(34.5MB)<br>
         </div>
       </div>
     </div>
