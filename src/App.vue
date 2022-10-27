@@ -46,6 +46,7 @@ body {
 }
 
 #app {
+  overflow: hidden;
   top: 0;
   font-family: 'Klee One', cursive;
   -webkit-font-smoothing: antialiased;
