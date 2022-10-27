@@ -5,32 +5,16 @@
     </h1>
     <div class="page-content">
       <p>
-        22常盤祭では、感染症対策の観点から事前予約制を導入します。<br />チケットの無い方はご入場いただけませんのでご了承下さい。
+        22常盤祭では、感染症対策の観点から事前予約制を導入します。<br/>チケットの無い方はご入場いただけませんのでご了承下さい。
       </p>
-      <UnderlinedSectionTitle
-        >事前予約制への申し込み方法</UnderlinedSectionTitle
-      >
+      <UnderlinedSectionTitle>事前予約制への申し込み方法</UnderlinedSectionTitle>
       <div class="event-application-buttons">
-        <p>
-          一次申し込みで定員に達しなかったため、<br />10/28(金)分チケットの2次申し込みを行います。
-        </p>
-        <a
-          href="https://e-ve.event-form.jp/event/39275/TokiwaDay1"
-          class="second-application-button"
-          >1日目(10/28)分はこちら</a
-        >
-        <ul>
-          <li>
-            ミスミスターコンテスト、花火大会など目玉企画もございます。是非お越しください。
-          </li>
-          <li>
-            一次申し込み期間にお申し込みいただいた方宛にメールをお送りしております。
-            ご確認ください。
-          </li>
-        </ul>
-        <p>一次申し込みは終了いたしました。</p>
-        <div><s> 2日目(10/29)分はこちら</s></div>
-        <div><s> 3日目(10/30)分はこちら</s></div>
+        <p>事前予約一次・二次受付は終了いたしました。<br>
+          お申込みいただいた方にはメールをお送りしております。<br>
+          ご確認ください。</p>
+        <div><s>1日目(10/28)分はこちら</s></div>
+        <div><s>2日目(10/29)分はこちら</s></div>
+        <div><s>3日目(10/30)分はこちら</s></div>
       </div>
       <UnderlinedSectionTitle>定員について</UnderlinedSectionTitle>
       <ul>
@@ -72,9 +56,10 @@
 
 <script>
 import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
+
 export default {
   name: "ReservationInfo",
-  components: { UnderlinedSectionTitle },
+  components: {UnderlinedSectionTitle},
 };
 </script>
 
@@ -153,6 +138,7 @@ export default {
       color: #25254d;
       font-weight: bold;
     }
+
     .back-button::before {
       content: "";
       background: url("../assets/goto_top_icon.webp") no-repeat;
@@ -168,6 +154,7 @@ export default {
       height: 16px;
     }
   }
+
   .event-application-buttons {
     display: flex;
     flex-direction: column;
@@ -185,6 +172,7 @@ export default {
       text-decoration: none;
       background-color: #94949455;
     }
+
     .second-application-button {
       border-radius: 0.8em;
       font-size: 1.3em;
@@ -195,10 +183,12 @@ export default {
       text-decoration: none;
       background-color: #c5d2ef;
     }
+
     p {
       color: red;
       font-size: 1.2em;
     }
+
     span {
       color: red;
     }
