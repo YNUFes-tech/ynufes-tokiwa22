@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import {event} from "vue-gtag";
+
 export default {
   props: {
     isVisible: {
@@ -29,6 +31,7 @@ export default {
   },
   methods: {
     close() {
+      event('pamphlet-download')
       this.$emit('close')
     }
   }

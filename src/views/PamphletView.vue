@@ -2,6 +2,7 @@
 // import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
 import StarTitle from "@/components/StarTitle";
 import {ref} from "vue";
+import {event} from "vue-gtag";
 import SimpleModal from "@/components/pamphlet/WarningDialog";
 
 const showDialog = ref(false)
@@ -17,10 +18,10 @@ const showDialog = ref(false)
         <span>22常盤祭のパンフレットは</span><span>こちらからダウンロードして</span><span>ご覧いただけます。</span>
       </div>
       <div class="download-buttons">
-        <a class="download-button" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-low.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank">
+        <a class="download-button" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-low.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank" @click="event('pamphlet-download-l')">
           パンフレット<br>軽量版<br>(20.8MB)<br>
         </a>
-        <div class="download-button" @click="showDialog=true">
+        <div class="download-button" @click="showDialog=truew">
           パンフレット<br>オリジナル版<br>(34.5MB)<br>
         </div>
       </div>
