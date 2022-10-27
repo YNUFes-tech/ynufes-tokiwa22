@@ -13,7 +13,7 @@ let default_selection
 const genre = useRoute().query.genre;
 if (Number(genre)) {
   if (Number(genre) === 10) {
-    default_selection = [false, false, false, false, true, true, true, true];
+    default_selection = [false, false, false, true, true, true, true, true];
   } else {
     default_selection = [false, false, false, false, false, false, false, false];
     default_selection[Number(genre) - 1] = true;
