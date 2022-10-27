@@ -119,4 +119,12 @@ html, body {
   }
 }
 
+.hover-to-shrink > * {
+  transition: all 0.1s linear;
+}
+
+.hover-to-shrink:hover > * {
+  transform: scale(0.95);
+}
+
 </style>

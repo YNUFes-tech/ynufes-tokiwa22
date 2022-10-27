@@ -2,10 +2,20 @@
   <div class="home-event-search-section">
     <StarTitle title="企画を探す" class="star-title"/>
     <div class="genre-buttons">
-      <router-link to="/events?genre=1" class="exhibition">展示</router-link>
-      <router-link to="/events?genre=10" class="food">飲食</router-link>
-      <router-link to="/events?genre=2" class="performance">パフォーマンス</router-link>
-      <router-link to="/events?genre=3" class="game"><span>ゲーム・</span><span>スポーツ</span></router-link>
+      <router-link to="/events?genre=1" class="exhibition hover-to-shrink">
+        <div>展示</div>
+      </router-link>
+      <router-link to="/events?genre=10" class="food hover-to-shrink">
+        <div>飲食</div>
+      </router-link>
+      <router-link to="/events?genre=2" class="performance hover-to-shrink">
+        <div>パフォーマンス</div>
+      </router-link>
+      <router-link to="/events?genre=3" class="game hover-to-shrink">
+        <div>
+          <span>ゲーム・</span><span>スポーツ</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -36,24 +46,26 @@
       font-size: 1.2em;
       width: 40%;
       line-height: 2;
-      border-radius: 0.5em;
-      background: #2c3e50;
-      padding: 0.5em;
+
+      > div {
+        border-radius: 0.5em;
+        padding: 0.5em;
+      }
     }
 
-    .exhibition {
+    .exhibition > div {
       background: #b36305;
     }
 
-    .food {
+    .food > div {
       background: #0598d2;
     }
 
-    .performance {
+    .performance > div {
       background: #e32017;
     }
 
-    .game {
+    .game > div {
       background: #00782a;
     }
   }

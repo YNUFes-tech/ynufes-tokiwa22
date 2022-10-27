@@ -13,24 +13,24 @@ import StarTitle from "@/components/StarTitle";
     <SponsorBlock class="sponsor-block"/>
     <div class="home-row-1">
       <div class="menu-buttons">
-        <router-link to="/reservation">
+        <router-link to="/reservation" class="hover-to-shrink">
           <IconRowButton class="reservation-icon-row" icon-path="/data/icons/generals/info.png"
                          title="事前予約制について"/>
           <img class="reservation-image" src="@/assets/reservation-info.webp">
         </router-link>
-        <router-link :to="{name:'EventListView'}">
+        <router-link :to="{name:'EventListView'}" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/list.webp" title="企画一覧"/>
         </router-link>
-        <router-link to="/time-table">
+        <router-link to="/time-table" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/schedule.webp" title="ステージタイムテーブル"/>
         </router-link>
-        <router-link to="/pamphlet">
+        <router-link to="/pamphlet" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/book.webp" title="パンフレット"/>
         </router-link>
-        <router-link to="/map">
+        <router-link to="/map" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/map.webp" title="マップをみる"/>
         </router-link>
-        <router-link to="/access">
+        <router-link to="/access" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/access.webp" title="アクセス"/>
         </router-link>
       </div>
