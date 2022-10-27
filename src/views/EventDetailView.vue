@@ -22,11 +22,14 @@ function getPlaceName(e) {
     case "H":
       place_name = "大学会館周辺";
       break;
+    case "ED":
+      place_name = "教育学部講義棟6号館"
+      break;
     case "KK":
-      place_name = "経済経営";
+      place_name = "経済経営学部講義棟1号館";
       break;
     case "T":
-      place_name = "都市";
+      place_name = "都市科学部講義棟";
       break;
     case "Y":
       place_name = "野外音楽堂";
