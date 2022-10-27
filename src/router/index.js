@@ -35,29 +35,30 @@ const routes = [
   {
     path: "/sp/karaoke",
     name: "",
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/KaraokeView.vue'),
+    component: () => import(/* webpackChunkName: "karaoke" */ '@/views/KaraokeView.vue'),
   },
   {
     path:'/sp/contest',
     name: '',
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/ContestView.vue')
+    component: UnderConstruction,
+    // component: () => import(/* webpackChunkName: "contest" */ '@/views/ContestView.vue')
   },
   {
     path: "/poster",
     name: "",
     // component: UnderConstruction
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/PosterView.vue'),
+    component: () => import(/* webpackChunkName: "poster-view" */ '@/views/PosterView.vue'),
   },
   {
     path: "/access",
     name: "AccessPage",
     // component: UnderConstruction,
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/AccessPage.vue'),
+    component: () => import(/* webpackChunkName: "access-page" */ '@/views/AccessPage.vue'),
   },
   {
     path: "/reservation",
     name: "ReservationInfo",
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/ReservationInfo.vue'),
+    component: () => import(/* webpackChunkName: "reservation-info" */ '@/views/ReservationInfo.vue'),
   },
   {
     path: "/map",
@@ -78,13 +79,13 @@ const routes = [
   {
     path: "/pamphlet",
     name: "PamphletPage",
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/PamphletView.vue'),
+    component: () => import(/* webpackChunkName: "pamphlet-page" */ '@/views/PamphletView.vue'),
   },
   {
     path: "/sponsors",
     name: "Sponsors",
     // component: UnderConstruction,
-    component: () => import(/* webpackChunkName: "group-user" */ '@/views/SponsorPage.vue'),
+    component: () => import(/* webpackChunkName: "sponsor-page" */ '@/views/SponsorPage.vue'),
   },
   {
     path: "/others",
