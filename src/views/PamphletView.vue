@@ -17,11 +17,11 @@ const showDialog = ref(false)
         <span>22常盤祭のパンフレットは</span><span>こちらからダウンロードして</span><span>ご覧いただけます。</span>
       </div>
       <div class="download-buttons">
-        <a class="download-button" href="/data/pamphlet/22tokiwa-pamphlet-light.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank">
-          パンフレット<br>軽量版<br>(21MB)<br>
+        <a class="download-button" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-low.pdf" download="22常盤祭パンフレット(軽量版).pdf" target="_blank">
+          パンフレット<br>軽量版<br>(20.5MB)<br>
         </a>
         <div class="download-button" @click="showDialog=true">
-          パンフレット<br>オリジナル版<br>(127MB)<br>
+          パンフレット<br>オリジナル版<br>(35.9MB)<br>
         </div>
       </div>
     </div>

@@ -2,14 +2,14 @@
   <teleport to="body">
     <div class="dialog" id="warning-dialog" v-show="isVisible" @click="close"></div>
     <div class="dialog-content" v-show="isVisible">
-      <h2>パンフレット(オリジナル版)をダウンロードしますか?</h2>
+      <h2>パンフレット(高解像度版)をダウンロードしますか?</h2>
       <div>
-        ※オリジナル版は大容量(122MB)です。パンフレットのダウンロードや利用に伴う通信費(パケット代)はご利用者様のご負担となります。
+        ※高解像度版は35.9MBです。パンフレットのダウンロードや利用に伴う通信費(パケット代)はご利用者様のご負担となります。
         モバイルデータ通信をご利用の際は軽量版のご利用を推奨します。
       </div>
       <div class="selection-button-row">
         <div @click="close">戻る</div>
-        <a class="download-button" download="22常盤祭パンフレット(オリジナル版).pdf" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22%E5%B8%B8%E7%9B%A4%E3%83%91%E3%83%B3%E3%83%95%E3%83%AC%E3%83%83%E3%83%88.pdf" target="_blank" @click="close">ダウンロード(122.23MB)</a>
+        <a class="download-button" download="22常盤祭パンフレット(高解像度).pdf" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-high.pdf" target="_blank" @click="close">ダウンロード(122.23MB)</a>
       </div>
     </div>
   </teleport>
