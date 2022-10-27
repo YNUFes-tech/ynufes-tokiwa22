@@ -64,7 +64,7 @@ function getPlaceName(e) {
         <img class="event_genre_icon" :src="`/data/icons/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
         <span>{{ eventGenre[props.eventData.event_genre_id] }}</span>
       </div>
-      <div v-bind:class="event_place_text_keiei">{{ getPlaceName(props.eventData) }}</div>
+      <div>{{ getPlaceName(props.eventData) }}</div>
     </div>
     <div class="meta_area">
       <h2 v-text="`${props.eventData.event_title}`" style="white-space: pre-wrap"/>
