@@ -115,8 +115,7 @@ fetch('https://infinite-bayou-57338.herokuapp.com/result.json', {
           オンライン投票の完了画面を投票所での投票時にお見せいただくと、もう一回抽選機を回すことができます。<br>
           各企画の企画詳細ページか以下の一覧表からご投票ください。<br>
           投票にはGoogleフォームを使用しており、Googleアカウントが必要になります。詳しくは投票一覧表をご覧ください。</p>
-        <div class="serch"><router-link to="/events">企画一覧から探す</router-link></div>
-        <div class="list"><a href="/22tokiwa_contest_list.pdf">投票一覧表(PDF)</a></div>
+        <div class="list"><a href="/data/icons/sp/22tokiwa_contest_list.pdf">投票一覧表(PDF)</a></div>
       </div>
       <div class="result">
         <UnderlinedSectionTitle>現在の順位</UnderlinedSectionTitle>
