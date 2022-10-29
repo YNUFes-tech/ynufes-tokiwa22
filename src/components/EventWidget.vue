@@ -25,7 +25,10 @@ const genreIcons = {
   7: "drink.png",
   8: "rice.png"
 }
-
+const showNoImage = function (e) {
+  e.target.onerror = null;
+  e.target.src = '/data/icons/events/noimage.png'
+}
 function getPlaceName(e) {
   let place_name = "";
   switch (e.event_place_id) {
@@ -58,7 +61,7 @@ function getPlaceName(e) {
 
 <template>
   <div class="event_widget">
-    <img :src="`/data/icons/events/${eventData.event_id}.webp`"/>
+    <img :src="`/data/icons/events/${eventData.event_id}.webp`" @error="showNoImage"/>
     <div class="tag_area">
       <div class="event_genre" v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
         <img class="event_genre_icon" :src="`/data/icons/genre/${genreIcons[props.eventData.event_genre_id]}`"/>

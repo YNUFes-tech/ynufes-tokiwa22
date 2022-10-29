@@ -40,6 +40,10 @@ function getPlaceName(e) {
   return place_name + e.event_pamphlet_id
 }
 
+const showNoImage = function (e) {
+  e.target.onerror = null;
+  e.target.src = '/data/icons/events/noimage.png'
+}
 </script>
 <template>
   <div class="root-wrapper">
@@ -76,7 +80,7 @@ function getPlaceName(e) {
       </div>
       <div class="event-detail-description">
         <div class="event-icon">
-          <img :src="`/data/icons/events/`+eventData.event_id+`.webp`">
+          <img :src="`/data/icons/events/`+eventData.event_id+`.webp`" @error="showNoImage">
         </div>
         <div class="event-description">
           <p class="allow-wrap" v-text="eventData.event_description"/>
