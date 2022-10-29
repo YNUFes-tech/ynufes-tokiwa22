@@ -21,7 +21,8 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .home-button {
-  width: 17em;
+  width: 80vw;
+  max-width: 17em;
   display: flex;
   align-items: center;
   background: #0b0b56;
