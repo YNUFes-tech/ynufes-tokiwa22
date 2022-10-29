@@ -3,8 +3,6 @@ import HomeView from '../views/HomeView.vue'
 import EventDetailView from '../views/EventDetailView'
 import EventListView from '../views/EventListView'
 import UnderConstruction from "@/views/UnderConstruction";
-// eslint-disable-next-line no-unused-vars
-import EventsAndStage from "@/views/EventsAndStage";
 import NotFound from "@/views/NotFound"
 
 const routes = [
@@ -40,8 +38,7 @@ const routes = [
   {
     path:'/sp/contest',
     name: '',
-    component: UnderConstruction,
-    // component: () => import(/* webpackChunkName: "contest" */ '@/views/ContestView.vue')
+    component: () => import(/* webpackChunkName: "contest" */ '@/views/ContestView.vue')
   },
   {
     path: "/poster",
@@ -62,8 +59,8 @@ const routes = [
   },
   {
     path: "/map",
-    name: "Map",
-    component: UnderConstruction,
+    name: "MapPage",
+    component: ()=> import(/* webpackChunkName: "reservation-info" */ '@/views/MapPage.vue'),
   },
   {
     path: "/time-table",
@@ -71,10 +68,10 @@ const routes = [
     component: UnderConstruction,
   },
   {
-    path: "/events-and-stage",
+    path: "/stages",
     name: "",
-    component: UnderConstruction,
-    // component: EventsAndStage,
+    // component: UnderConstruction,
+    component: () => import(/* webpackChunkName: "stages" */ '@/views/EventStages.vue'),
   },
   {
     path: "/pamphlet",
@@ -84,7 +81,6 @@ const routes = [
   {
     path: "/sponsors",
     name: "Sponsors",
-    // component: UnderConstruction,
     component: () => import(/* webpackChunkName: "sponsor-page" */ '@/views/SponsorPage.vue'),
   },
   {

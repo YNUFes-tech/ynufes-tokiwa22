@@ -22,8 +22,8 @@ import SecondRowSwiper from "@/components/home/SecondRowSwiper";
         <router-link :to="{name:'EventListView'}" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/list.webp" title="企画一覧"/>
         </router-link>
-        <router-link to="/time-table" class="hover-to-shrink">
-          <IconRowButton icon-path="/data/icons/generals/schedule.webp" title="ステージタイムテーブル"/>
+        <router-link to="/stages" class="hover-to-shrink">
+          <IconRowButton icon-path="/data/icons/generals/schedule.webp" title="ステージイベント"/>
         </router-link>
         <router-link to="/pamphlet" class="hover-to-shrink">
           <IconRowButton icon-path="/data/icons/generals/book.webp" title="パンフレット"/>
