@@ -1,0 +1,38 @@
+[
+  {
+    "title": "カラオケバトル in 横国",
+    "date": "10.28",
+    "time": "14:00~15:40",
+    "place": "中央図書館1階",
+    "description": "常盤祭にのど自慢が大集合！\n優勝をかけたバトルに目が離せない!!\n目の前で繰り広げられる熱戦をお楽しみください。",
+    "detail_page": "/sp/karaoke",
+    "icon": "/data/icons/sp/karaoke_logo.png",
+    "date_color": 1
+  },
+  {
+    "title": "企画総選挙",
+    "date": "10.28",
+    "time": "14:00~15:30",
+    "place": "中央図書館前",
+    "description": "常盤祭の企画の中から１番皆さんが満足した企画を\n決めていただきます。また投票された方には豪華景品\nが当たるチャンスも！是非ご参加ください。",
+    "detail_page": "/sp/contest",
+    "icon": "/data/icons/sp/contest.webp",
+    "date_color": 1
+  },
+  {
+    "title": "Mr&Ms. YNU Contest 2022",
+    "date": "10.28",
+    "time": "16:30~18:45",
+    "place": "経営2号館109教室",
+    "description": "Mr & Ms. YNU Contest 2022を締めくくる最後の舞台です!!\n４か月の活動を経て成長したファイナリストの勇姿を\nぜひその目でご覧ください!!",
+    "date_color": 1
+  },
+  {
+    "title": "花火大会",
+    "date": "10.28",
+    "time": "18:45~19:00",
+    "place": "キャンパス全域・配信",
+    "description": "大学祭の花火が３年ぶりに横国の夜空へ帰ってきた！\n今年は音楽とともに打ち上がります！\nこの景色に、あなたはどんな希望を込めますか？\n",
+    "date_color": 1
+  }
+]

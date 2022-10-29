@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Pokémon UNITE × 常盤祭",
+    "date": "10.30",
+    "time": "10:00~11:00",
+    "place": "経営2号館109教室",
+    "description": "5 vs 5でチームの仲間と共に戦うPokémon UNITE。\n全国の大学で実施中の「ポケモンユナイト大学祭2022」を\nここ常盤台の地でも開催します!!\n横国最強のポケモンマスターは一体誰に…!?\n",
+    "date_color": 3
+  },
+  {
+    "title": "横国女声合唱団 Dancing Dolphins",
+    "date": "10.30",
+    "time": "09:30~10:10",
+    "place": "野外音楽堂特設ステージ",
+    "description": "Mr & Ms. YNU Contest 2022を締めくくる最後の舞台です!!\n４か月の活動を経て成長したファイナリストの勇姿を\nぜひその目でご覧ください!!",
+    "date_color": 3
+  },
+  {
+    "title": "Grand☆Finale",
+    "date": "10.30",
+    "time": "13:20~14:30",
+    "place": "野外音楽堂特設ステージ",
+    "description": "クイズやゲーム、抽選なども織り交ぜたBINGO大会。\n景品も用意しています！3日間にわたって行われた\n常盤祭を振り返りながら、盛大に締めくくろう！",
+    "date_color": 3
+  },
+  {
+    "title": "企画総選挙",
+    "date": "10.30",
+    "time": "09:00~12:00",
+    "place": "中央図書館前",
+    "description": "常盤祭の企画の中から１番皆さんが満足した企画を\n決めていただきます。また投票された方には豪華景品\nが当たるチャンスも！是非ご参加ください。",
+    "detail_page": "/sp/contest",
+    "icon": "/data/icons/sp/contest.webp",
+    "date_color": 3
+  }
+]
