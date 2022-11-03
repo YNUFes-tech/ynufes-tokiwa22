@@ -249,7 +249,7 @@
         <li>GORGE</li>
         <li>GU横浜ビブレ店</li>
         <li>U.S.BOARDER</li>
-        <li>株式会社ＫＴグループ</li>
+        <li>株式会社アットヨコハマ</li>
         <li>株式会社MoreVision</li>
         <li>株式会社ガロア</li>
         <li>株式会社スマートキャンパス</li>
