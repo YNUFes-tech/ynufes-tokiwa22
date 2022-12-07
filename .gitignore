@@ -2,7 +2,7 @@
 node_modules
 /dist
 /public/data/pamphlet
-
+.yarn
 # local env files
 .env.local
 .env.*.local
