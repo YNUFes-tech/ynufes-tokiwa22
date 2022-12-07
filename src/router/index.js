@@ -86,7 +86,7 @@ const routes = [
   {
     path: "/others",
     name: "Others",
-    component: UnderConstruction
+    component: () => import(/* webpackChunkName: "others-page" */ '@/views/OthersView.vue'),
     // component: Other
   },
   {path: '/404', component: NotFound},
